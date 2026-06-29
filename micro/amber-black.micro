@@ -1,0 +1,45 @@
+color-link default "#FFFFFF,#000000"
+color-link comment "#A0A0A0,#000000"
+color-link identifier "#FFFFFF,#000000"
+
+color-link constant "#FFB900,#000000"
+color-link constant.string "#FFD76A,#000000"
+color-link constant.string.char "#FFE39A,#000000"
+
+color-link statement "bold #FFB900,#000000"
+color-link symbol.operator "#FFB900,#000000"
+color-link preproc "#FFCA33,#000000"
+color-link type "#FFD76A,#000000"
+color-link special "#FFB900,#000000"
+
+color-link underlined "underline #FFB900,#000000"
+color-link error "bold #FFB900,#000000"
+color-link todo "bold #000000,#FFB900"
+
+color-link hlsearch "#000000,#FFB900"
+color-link statusline "#000000,#FFB900"
+color-link tabbar "#FFFFFF,#080808"
+
+color-link indent-char "#332500,#000000"
+color-link line-number "#A0A0A0,#050505"
+color-link current-line-number "bold #FFB900,#000000"
+
+color-link diff-added "#FFB900,#000000"
+color-link diff-modified "#A0A0A0,#000000"
+color-link diff-deleted "#555555,#000000"
+
+color-link gutter-error "#FFB900,#000000"
+color-link gutter-warning "#FFB900,#000000"
+
+color-link cursor-line "#080808"
+color-link color-column "#101010"
+
+# No extended types; plain brackets.
+color-link type.extended "default"
+# color-link symbol.brackets "default"
+
+color-link symbol.tag "#FFCA33,#000000"
+color-link match-brace "#000000,#FFB900"
+
+color-link tab-error "#664A00,#000000"
+color-link trailingws "#664A00,#000000"

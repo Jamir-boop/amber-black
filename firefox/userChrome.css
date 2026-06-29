@@ -1,0 +1,682 @@
+/* Amber black Firefox chrome.
+   Put this file in <profile>/chrome/userChrome.css.
+   Copy img/background.gif to <profile>/chrome/img/background.gif. */
+
+:root {
+  color-scheme: dark !important;
+  accent-color: #FFB900 !important;
+
+  --amber-bg: #000000;
+  --amber-surface-1: #050505;
+  --amber-surface-2: #080808;
+  --amber-surface-3: #101010;
+  --amber-text: #FFFFFF;
+  --amber-muted: #A0A0A0;
+  --amber-disabled: #555555;
+  --amber-accent: #FFB900;
+  --amber-hover: #FFB900;
+  --amber-active: #FFB900;
+  --amber-outline: #FFB900;
+  --amber-border: #332500;
+  --amber-border-strong: #664A00;
+
+  --lwt-accent-color: #000000 !important;
+  --lwt-text-color: #FFFFFF !important;
+  --lwt-toolbar-field-background-color: #000000 !important;
+  --lwt-toolbar-field-color: #FFFFFF !important;
+  --lwt-toolbar-field-border-color: #332500 !important;
+  --lwt-toolbar-field-focus: #050505 !important;
+  --lwt-toolbar-field-focus-color: #FFFFFF !important;
+  --lwt-toolbar-field-highlight: #FFB900 !important;
+  --lwt-toolbar-field-highlight-text: #000000 !important;
+  --lwt-selected-tab-background-color: #000000 !important;
+  --lwt-tabs-border-color: #000000 !important;
+  --chrome-content-separator-color: #000000 !important;
+  --tabs-border-color: #000000 !important;
+  --tab-line-color: #000000 !important;
+
+  --toolbar-bgcolor: transparent !important;
+  --toolbar-color: #FFFFFF !important;
+  --toolbarbutton-icon-fill: #FFFFFF !important;
+  --toolbarbutton-hover-background: #FFB900 !important;
+  --toolbarbutton-active-background: #FFB900 !important;
+  --button-hover-bgcolor: #FFB900 !important;
+  --button-active-bgcolor: #FFB900 !important;
+  --button-primary-bgcolor: #FFB900 !important;
+  --button-primary-hover-bgcolor: #FFB900 !important;
+  --button-primary-active-bgcolor: #FFB900 !important;
+  --button-primary-border-color: #FFB900 !important;
+  --button-primary-color: #000000 !important;
+
+  --tab-selected-bgcolor: #000000 !important;
+  --tab-hover-background-color: #000000 !important;
+  --tab-loading-fill: #FFB900 !important;
+
+  --urlbar-box-bgcolor: transparent !important;
+  --urlbar-box-focus-bgcolor: #050505 !important;
+
+  --arrowpanel-background: #000000 !important;
+  --arrowpanel-color: #FFFFFF !important;
+  --arrowpanel-border-color: #FFB900 !important;
+  --panel-background: #000000 !important;
+  --panel-color: #FFFFFF !important;
+  --panel-border-color: #FFB900 !important;
+  --panel-separator-color: #332500 !important;
+  --menu-background-color: #000000 !important;
+  --menu-color: #FFFFFF !important;
+  --menu-border-color: #FFB900 !important;
+  --menuitem-hover-background-color: #FFB900 !important;
+  --menuitem-disabled-hover-background-color: transparent !important;
+  --focus-outline-color: #FFB900 !important;
+}
+
+#main-window,
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar,
+#titlebar,
+#browser,
+#appcontent,
+findbar {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+#navigator-toolbox {
+  background-image: url("img/background.gif") !important;
+  background-position: right top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+#TabsToolbar,
+#nav-bar,
+#PersonalToolbar {
+  background: transparent !important;
+  border-color: #332500 !important;
+  box-shadow: none !important;
+}
+
+toolbarbutton,
+toolbarbutton > .toolbarbutton-icon,
+toolbarbutton > .toolbarbutton-text,
+toolbarbutton > .toolbarbutton-badge-stack,
+#urlbar-icons,
+#urlbar-icons toolbarbutton,
+.urlbar-page-action,
+.toolbarbutton-1 {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+toolbarbutton:hover:not([disabled="true"]),
+.toolbarbutton-1:hover:not([disabled="true"]) {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+toolbarbutton[open="true"],
+toolbarbutton[checked="true"],
+toolbarbutton:active,
+.toolbarbutton-1[open="true"],
+.toolbarbutton-1[checked="true"],
+.toolbarbutton-1:active {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+toolbarbutton:hover:not([disabled="true"]) > *,
+toolbarbutton[open="true"] > *,
+toolbarbutton[checked="true"] > *,
+toolbarbutton:active > *,
+.toolbarbutton-1:hover:not([disabled="true"]) > *,
+.toolbarbutton-1[open="true"] > *,
+.toolbarbutton-1[checked="true"] > *,
+.toolbarbutton-1:active > * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) {
+  color: #A0A0A0 !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-background {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 185, 0, 0.2) !important;
+  border-color: rgba(255, 185, 0, 0.2) !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[selected="true"] > .tab-stack > .tab-background {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border: 1px solid #FFB900 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tabbrowser-tab[selected="true"]:hover > .tab-stack > .tab-background {
+  background-color: #000000 !important;
+  border-color: #FFB900 !important;
+}
+
+.tab-line,
+.tab-throbber,
+.tab-icon-pending,
+.tab-icon-image {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+#urlbar-background,
+#searchbar,
+findbar,
+.findbar-textbox {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+  box-shadow: none !important;
+}
+
+#urlbar[focused="true"] #urlbar-background,
+#searchbar:focus-within,
+.findbar-textbox:focus {
+  background-color: #050505 !important;
+  border-color: #FFB900 !important;
+  box-shadow: 0 0 0 1px #FFB900 !important;
+}
+
+#urlbar-input,
+#urlbar-scheme,
+#urlbar .urlbar-input-box,
+.searchbar-textbox,
+.findbar-textbox {
+  color: #FFFFFF !important;
+}
+
+#urlbar ::selection,
+.searchbar-textbox::selection,
+.findbar-textbox::selection {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+}
+
+.urlbarView,
+.urlbarView-body-inner,
+.search-panel-one-offs,
+.search-one-offs {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}
+
+.urlbarView-row,
+.searchbar-engine-one-off-item {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.urlbarView-row:hover,
+.urlbarView-row[selected],
+.urlbarView-row[aria-selected="true"],
+.searchbar-engine-one-off-item:hover,
+.searchbar-engine-one-off-item[selected] {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.urlbarView-row:hover *,
+.urlbarView-row[selected] *,
+.urlbarView-row[aria-selected="true"] *,
+.searchbar-engine-one-off-item:hover *,
+.searchbar-engine-one-off-item[selected] * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+panel,
+panelmultiview,
+.panel-viewcontainer,
+.panel-viewstack,
+.panel-subview-body,
+.panel-header,
+.panel-arrowcontent,
+menupopup,
+popup {
+  --panel-background: #000000 !important;
+  --panel-color: #ffb900 !important;
+  --panel-border-color: #FFB900 !important;
+  --panel-border-radius: 0 !important;
+  --arrowpanel-border-radius: 0 !important;
+  --menuitem-border-radius: 0 !important;
+  --menu-arrow-opacity: 1 !important;
+  color: #FFFFFF !important;
+  border-color: #FFB900 !important;
+}
+
+panel,
+menupopup,
+popup {
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+panelmultiview,
+.panel-viewcontainer,
+.panel-viewstack,
+.panel-subview-body,
+.panel-header,
+.panel-arrowcontent {
+  background-color: #000000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+menupopup,
+popup,
+panel::part(content),
+menupopup::part(content),
+popup::part(content),
+menupopup > menu,
+menupopup > menuitem,
+popup > menu,
+popup > menuitem {
+  border-radius: 0 !important;
+}
+
+menupopup > menu::after,
+popup > menu::after {
+  fill: #FFFFFF !important;
+  fill-opacity: 1 !important;
+  -moz-context-properties: fill, fill-opacity !important;
+}
+
+panel::part(content),
+menupopup::part(content),
+popup::part(content) {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FFB900 !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+.popup-notification-primary-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  background: #FFB900 !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  border: 1px solid #FFB900 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.popup-notification-secondary-button,
+.popup-notification-dropmarker,
+.panel-footer > .footer-button:not(.popup-notification-primary-button) {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+  border: 1px solid #332500 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.popup-notification-primary-button:hover,
+.popup-notification-primary-button:active,
+.popup-notification-primary-button[open="true"],
+.popup-notification-secondary-button:hover,
+.popup-notification-secondary-button:active,
+.popup-notification-secondary-button[open="true"],
+.popup-notification-dropmarker:hover,
+.popup-notification-dropmarker:active,
+.popup-notification-dropmarker[open="true"],
+.panel-footer > .footer-button:hover,
+.panel-footer > .footer-button:active,
+.panel-footer > .footer-button[open="true"] {
+  background: #FFB900 !important;
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  border-color: #FFB900 !important;
+}
+
+.popup-notification-primary-button *,
+.popup-notification-primary-button:hover *,
+.popup-notification-primary-button:active *,
+.popup-notification-primary-button[open="true"] *,
+.popup-notification-secondary-button:hover *,
+.popup-notification-secondary-button:active *,
+.popup-notification-secondary-button[open="true"] *,
+.popup-notification-dropmarker:hover *,
+.popup-notification-dropmarker:active *,
+.popup-notification-dropmarker[open="true"] *,
+.panel-footer > .footer-button:hover *,
+.panel-footer > .footer-button:active *,
+.panel-footer > .footer-button[open="true"] * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.popup-notification-secondary-button:not(:hover):not(:active):not([open="true"]) *,
+.popup-notification-dropmarker:not(:hover):not(:active):not([open="true"]) *,
+.panel-footer > .footer-button:not(.popup-notification-primary-button):not(:hover):not(:active):not([open="true"]) * {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+@-moz-document url("chrome://global/content/commonDialog.xhtml") {
+  #commonDialog {
+    --button-bgcolor: transparent !important;
+    --button-hover-bgcolor: #FFB900 !important;
+    --button-active-bgcolor: #FFB900 !important;
+    --button-color: #FFFFFF !important;
+    --button-border-color: #332500 !important;
+    --button-primary-bgcolor: #FFB900 !important;
+    --button-primary-hover-bgcolor: #FFB900 !important;
+    --button-primary-active-bgcolor: #FFB900 !important;
+    --button-primary-color: #000000 !important;
+    --button-primary-border-color: #FFB900 !important;
+
+    --button-background-color: transparent !important;
+    --button-background-color-hover: #FFB900 !important;
+    --button-background-color-active: #FFB900 !important;
+    --button-text-color: #FFFFFF !important;
+    --button-text-color-hover: #000000 !important;
+    --button-text-color-active: #000000 !important;
+    --button-border: 1px solid #332500 !important;
+    --button-border-color-hover: #FFB900 !important;
+    --button-border-color-active: #FFB900 !important;
+    --button-background-color-primary: #FFB900 !important;
+    --button-background-color-primary-hover: #FFB900 !important;
+    --button-background-color-primary-active: #FFB900 !important;
+    --button-text-color-primary: #000000 !important;
+    --button-text-color-primary-hover: #000000 !important;
+    --button-text-color-primary-active: #000000 !important;
+    --button-border-color-primary: #FFB900 !important;
+    --button-border-color-primary-hover: #FFB900 !important;
+    --button-border-color-primary-active: #FFB900 !important;
+
+    --in-content-button-background: transparent !important;
+    --in-content-button-background-hover: #FFB900 !important;
+    --in-content-button-background-active: #FFB900 !important;
+    --in-content-button-text-color: #FFFFFF !important;
+    --in-content-button-border-color: #332500 !important;
+    --in-content-primary-button-background: #FFB900 !important;
+    --in-content-primary-button-background-hover: #FFB900 !important;
+    --in-content-primary-button-background-active: #FFB900 !important;
+    --in-content-primary-button-text-color: #000000 !important;
+  }
+
+  #commonDialog::part(dialog-button) {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -moz-default-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    border: 1px solid #332500 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #commonDialog button {
+    appearance: none !important;
+    -moz-appearance: none !important;
+    -moz-default-appearance: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    border: 1px solid #332500 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+    button:not([disabled="true"]):hover{
+      color: black !important;
+  }
+
+  #commonDialog::part(dialog-button):default,
+  #commonDialog::part(dialog-button):focus,
+  #commonDialog::part(dialog-button):focus-visible,
+  #commonDialog::part(dialog-button):hover,
+  #commonDialog::part(dialog-button):active {
+    background: #FFB900 !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    border-color: #FFB900 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  #commonDialog button[dlgtype="accept"],
+  #commonDialog button[default="true"],
+  #commonDialog button:default,
+  #commonDialog button:focus,
+  #commonDialog button:focus-visible,
+  #commonDialog button:hover,
+  #commonDialog button:active {
+    background: #FFB900 !important;
+    background-color: #FFB900 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    border-color: #FFB900 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+
+.subviewbutton,
+panel toolbarbutton,
+menupopup > menu,
+menupopup > menuitem,
+#context-navigation > .menuitem-iconic,
+popup > menu,
+popup > menuitem {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  background-color: transparent !important;
+}
+
+.subviewbutton:hover,
+.subviewbutton[focused],
+panel toolbarbutton:hover,
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
+  background-color: #FFB900 !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+.subviewbutton:hover *,
+.subviewbutton[focused] *,
+panel toolbarbutton:hover *,
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+popup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox) {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+#appMenu-zoomReduce-button,
+#appMenu-zoomReduce-button2 {
+  list-style-image: url("chrome://browser/skin/subtract-circle-fill.svg") !important;
+}
+
+#appMenu-zoomEnlarge-button,
+#appMenu-zoomEnlarge-button2 {
+  list-style-image: url("chrome://browser/skin/add-circle-fill.svg") !important;
+}
+
+#appMenu-fullscreen-button,
+#appMenu-fullscreen-button2 {
+  list-style-image: url("chrome://browser/skin/fullscreen.svg") !important;
+}
+
+#appMenu-fullscreen-button[checked],
+#appMenu-fullscreen-button2[checked] {
+  list-style-image: url("chrome://browser/skin/fullscreen-exit.svg") !important;
+}
+
+#appMenu-zoomReduce-button > .toolbarbutton-icon,
+#appMenu-zoomReduce-button2 > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2 > .toolbarbutton-icon {
+  -moz-context-properties: fill, fill-opacity, stroke !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  stroke: #000000 !important;
+  fill-opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+#appMenu-zoomReduce-button:hover > .toolbarbutton-icon,
+#appMenu-zoomReduce-button[focused] > .toolbarbutton-icon,
+#appMenu-zoomReduce-button2:hover > .toolbarbutton-icon,
+#appMenu-zoomReduce-button2[focused] > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button:hover > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button[focused] > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2:hover > .toolbarbutton-icon,
+#appMenu-zoomEnlarge-button2[focused] > .toolbarbutton-icon {
+  color: #000000 !important;
+  fill: #000000 !important;
+  stroke: #FFB900 !important;
+  background-color: transparent !important;
+}
+
+#appMenu-fullscreen-button > .toolbarbutton-icon,
+#appMenu-fullscreen-button2 > .toolbarbutton-icon {
+  -moz-context-properties: fill, fill-opacity !important;
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  fill-opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+#appMenu-fullscreen-button:hover > .toolbarbutton-icon,
+#appMenu-fullscreen-button[focused] > .toolbarbutton-icon,
+#appMenu-fullscreen-button2:hover > .toolbarbutton-icon,
+#appMenu-fullscreen-button2[focused] > .toolbarbutton-icon {
+  color: #000000 !important;
+  fill: #000000 !important;
+  background-color: #FFB900 !important;
+}
+
+menupopup > menu[_moz-menuactive="true"]:not([disabled="true"])::after,
+popup > menu[_moz-menuactive="true"]:not([disabled="true"])::after {
+  fill: #000000 !important;
+  fill-opacity: 1 !important;
+}
+
+menupopup > menu[disabled="true"],
+menupopup > menuitem[disabled="true"],
+#context-navigation > .menuitem-iconic[disabled="true"],
+popup > menu[disabled="true"],
+popup > menuitem[disabled="true"],
+.subviewbutton[disabled="true"] {
+  color: #555555 !important;
+  fill: #555555 !important;
+}
+
+menuseparator,
+toolbarseparator,
+.PanelUI-subView toolbarseparator,
+.panel-subview-footer,
+.panel-header {
+  border-color: #332500 !important;
+}
+
+#sidebar-box,
+#sidebar-header,
+#sidebar-search-container,
+#sidebar-splitter {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}
+
+#sidebar-header {
+  border-bottom: 1px solid #332500 !important;
+}
+
+#statuspanel-label {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FFB900 !important;
+}
+
+#autoscroller,
+.autoscroller {
+  border-radius: 50% !important;
+  color: #FFB900 !important;
+  fill: #FFB900 !important;
+  -moz-context-properties: fill, fill-opacity !important;
+  --autoscroll-background-image: url("img/autoscroll.svg") !important;
+  background-image: var(--autoscroll-background-image) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  --panel-background: transparent !important;
+}
+
+#autoscroller[scrolldir="NS"],
+.autoscroller[scrolldir="NS"] {
+  --autoscroll-background-image: url("img/autoscroll-vertical.svg") !important;
+}
+
+#autoscroller[scrolldir="EW"],
+.autoscroller[scrolldir="EW"] {
+  --autoscroll-background-image: url("img/autoscroll-horizontal.svg") !important;
+}
+
+notification-message,
+notificationbox,
+.notificationbox-stack {
+  background-color: #000 !important;
+  color: #FFFFFF !important;
+  border-color: #332500 !important;
+}

@@ -1,0 +1,117 @@
+/* ==UserStyle==
+@name         Global Terminal Style 🔥
+@version      0.0.19
+@namespace    https://userstyles.world/user/jamir-boop
+@description  Global selection color, safer Cascadia Code font override, optional CRT overlay.
+@preprocessor stylus
+@author       jamir-boop
+@license      MIT
+
+@var color mainColor "Main color" #ffb900
+@var checkbox localFileStyle "Apply style on local files" 0
+@var checkbox crtOverlay "CRT monitor overlay" 0
+@var checkbox crtAnimation "CRT animation" 0
+@var range crtSepia "CRT sepia" [0.15, 0, 1, 0.01]
+@var range firefoxScrollbarWidth "Firefox scrollbar width" [1, 0, 2, 1]
+==/UserStyle== */
+
+::selection
+    color: #000 !important
+    background: mainColor !important
+
+::-moz-selection
+    color: #000 !important
+    background: mainColor !important
+
+@supports (-moz-appearance: none)
+    *, html
+        if firefoxScrollbarWidth == 0
+            scrollbar-width: none !important
+        else if firefoxScrollbarWidth == 2
+            scrollbar-width: auto !important
+            scrollbar-color: transparent transparent !important
+        else
+            scrollbar-width: thin !important
+            scrollbar-color: transparent transparent !important
+
+    *:hover, *:focus, *:focus-within,
+    html:hover, html:focus, html:focus-within
+        if firefoxScrollbarWidth != 0
+            scrollbar-color: rgba(mainColor, 1) transparent !important
+
+if crtOverlay
+    body
+        filter: contrast(1.08) saturate(1.12) sepia(crtSepia) !important
+
+    html::before
+        content: "" !important
+        position: fixed !important
+        inset: 0 !important
+        display: block !important
+        box-sizing: border-box !important
+        contain: paint !important
+        z-index: 2147483647 !important
+        pointer-events: none !important
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 52%, rgba(0, 0, 0, .38) 53%, rgba(0, 0, 0, .38) 100%), linear-gradient(to right, rgba(mainColor, .07), rgba(mainColor, 0) 35%, rgba(mainColor, .06) 70%, rgba(mainColor, 0))
+        background-size: 100% 8px, 4px 100% !important
+        background-repeat: repeat !important
+        mix-blend-mode: multiply !important
+        opacity: .20 !important
+
+    html::after
+        content: "" !important
+        position: fixed !important
+        inset: 0 !important
+        display: block !important
+        box-sizing: border-box !important
+        contain: paint !important
+        z-index: 2147483647 !important
+        pointer-events: none !important
+        background: radial-gradient(ellipse at center, rgba(mainColor, .11) 0%, rgba(mainColor, .04) 42%, rgba(0, 0, 0, .42) 100%) !important
+        opacity: .15 !important
+
+    if crtAnimation
+        html::before
+            animation: global-crt-scanlines 20s linear infinite !important
+
+        html::after
+            animation: global-crt-flicker 1.8s infinite steps(30, end) !important
+
+@keyframes global-crt-scanlines
+    0%
+        background-position: 0 0, 0 0
+    100%
+        background-position: 0 8px, 4px 0
+
+@keyframes global-crt-flicker
+    0%, 100%
+        opacity: .12
+    50%
+        opacity: .16
+
+@-moz-document url-prefix("file:///")
+    if localFileStyle
+        html, body
+            background: #000 !important
+            color: #fff !important
+
+        p, div, span,
+        h1, h2, h3, h4, h5, h6,
+        ul, ol, li,
+        table, thead, tbody, tfoot, tr, th, td, caption,
+        blockquote,
+        section, article, main, header, footer, nav, aside
+            background: #000 !important
+            color: #fff !important
+
+        pre, code, kbd, samp, var, tt
+            background: #000 !important
+            color: #fff !important
+
+        a, a:visited
+            color: mainColor !important
+
+        input, textarea, select, option, button
+            background: #000 !important
+            color: #fff !important
+            border-color: #666 !important

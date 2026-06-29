@@ -1,0 +1,26 @@
+{
+  "name": "Amber Black",
+  "colors": {
+    "background": "#000000",
+    "foreground": "#FFFFFF",
+    "accent": "#FFB900",
+    "accentHover": "#FFB900",
+    "accentActive": "#FFB900",
+    "border": "#332500",
+    "borderStrong": "#664A00",
+    "inputBackground": "#000000",
+    "inputForeground": "#FFFFFF",
+    "inputBorder": "#332500",
+    "inputFocusBorder": "#FFB900",
+    "buttonBackground": "#FFB900",
+    "buttonForeground": "#000000",
+    "buttonHoverBackground": "#FFB900",
+    "buttonActiveBackground": "#FFB900",
+    "selectionBackground": "#FFB900",
+    "selectionForeground": "#000000",
+    "menuBackground": "#000000",
+    "menuForeground": "#FFFFFF",
+    "menuHoverBackground": "#FFB900",
+    "menuHoverForeground": "#000000"
+  }
+}

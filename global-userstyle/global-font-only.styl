@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         Global Font Only Style 🔥
+@version      0.0.2
+@namespace    https://userstyles.world/user/jamir-boop
+@description  Global font replacement only - no other styling
+@preprocessor stylus
+@author       jamir-boop
+@license      MIT
+
+@var checkbox applyCustomFont "Apply custom font" 1
+@var text fontName "Font name" "CaskaydiaCove Nerd Font"
+@var range fontWeight "Font weight" [400, 100, 900, 50]
+==/UserStyle== */
+
+fontStack = fontName, "Cascadia Cove NF", "CaskaydiaCove NF", "Cascadia Code", "Cascadia Mono", Consolas, monospace
+
+ligatureSettings()
+    font-weight: fontWeight !important
+    font-variant-ligatures: contextual common-ligatures discretionary-ligatures !important
+    font-feature-settings: "liga" 1, "calt" 1, "dlig" 1 !important
+    text-rendering: optimizeLegibility !important
+
+if applyCustomFont
+    :where(html, body, p, div, span, a, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, thead, tbody, tfoot, tr, th, td, caption, blockquote, q, cite, main, section, article, header, footer, nav, aside, label, legend, summary, details, button, input, textarea, select, option, optgroup, pre, code, kbd, samp, var, tt, small, strong, em, b, i, u, mark, time):not(:where(svg, img, canvas, video, audio, picture, source, [role="img"], [aria-hidden="true"], .icon, [class^="icon-"], [class*=" icon-"], [class^="Icon"], [class*=" Icon"], .fa, .fas, .far, .fal, .fad, .fab, [class^="fa-"], [class*=" fa-"], .material-icons, .material-icons-outlined, .material-icons-round, .material-icons-sharp, .material-icons-two-tone, .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .codicon, [class^="codicon-"], [class*=" codicon-"], .octicon, [class^="octicon-"], [class*=" octicon-"], .mdi, [class^="mdi-"], [class*=" mdi-"], .bi, [class^="bi-"], [class*=" bi-"], .ionicon, [class^="ion-"], [class*=" ion-"], .glyph, .glyphicon, [class^=" glyphicon-"], [class*=" glyphicon-"]))
+        &:not(svg):not(img):not(canvas):not(video):not(audio):not(picture):not(source):not([role="img"]):not([aria-hidden="true"]):not(.icon):not([class^="icon-"]):not([class*=" icon-"]):not([class^="Icon"]):not([class*=" Icon"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fad):not(.fab):not([class^="fa-"]):not([class*=" fa-"]):not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not(.codicon):not([class^="codicon-"]):not([class*=" codicon-"]):not(.octicon):not([class^="octicon-"]):not([class*=" octicon-"]):not(.mdi):not([class^="mdi-"]):not([class*=" mdi-"]):not(.bi):not([class^="bi-"]):not([class*=" bi-"]):not(.ionicon):not([class^="ion-"]):not([class*=" ion-"]):not(.glyph):not(.glyphicon):not([class^=" glyphicon-"]):not([class*=" glyphicon-"]))
+            font-family: fontStack !important
+            ligatureSettings()
+
+    :where(pre, code, kbd, samp, var, tt)
+        font-family: fontStack !important
+        ligatureSettings()
