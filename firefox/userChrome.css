@@ -250,6 +250,7 @@ findbar,
   stroke: #000000 !important;
 }
 
+/* Website selects use this popup; preserve Firefox's contrast handling. */
 panel,
 panelmultiview,
 .panel-viewcontainer,
@@ -257,7 +258,7 @@ panelmultiview,
 .panel-subview-body,
 .panel-header,
 .panel-arrowcontent,
-menupopup,
+menupopup:not(#ContentSelectDropdownPopup),
 popup {
   --panel-background: #000000 !important;
   --panel-color: #ffb900 !important;
@@ -271,7 +272,7 @@ popup {
 }
 
 panel,
-menupopup,
+menupopup:not(#ContentSelectDropdownPopup),
 popup {
   background-color: transparent !important;
   border: 0 !important;
@@ -290,19 +291,19 @@ panelmultiview,
   box-shadow: none !important;
 }
 
-menupopup,
+menupopup:not(#ContentSelectDropdownPopup),
 popup,
 panel::part(content),
-menupopup::part(content),
+menupopup:not(#ContentSelectDropdownPopup)::part(content),
 popup::part(content),
-menupopup > menu,
-menupopup > menuitem,
+menupopup:not(#ContentSelectDropdownPopup) > menu,
+menupopup:not(#ContentSelectDropdownPopup) > menuitem,
 popup > menu,
 popup > menuitem {
   border-radius: 0 !important;
 }
 
-menupopup > menu::after,
+menupopup:not(#ContentSelectDropdownPopup) > menu::after,
 popup > menu::after {
   fill: #FFFFFF !important;
   fill-opacity: 1 !important;
@@ -310,7 +311,7 @@ popup > menu::after {
 }
 
 panel::part(content),
-menupopup::part(content),
+menupopup:not(#ContentSelectDropdownPopup)::part(content),
 popup::part(content) {
   background-color: #000000 !important;
   color: #FFFFFF !important;
@@ -506,8 +507,8 @@ popup::part(content) {
 
 .subviewbutton,
 panel toolbarbutton,
-menupopup > menu,
-menupopup > menuitem,
+menupopup:not(#ContentSelectDropdownPopup) > menu,
+menupopup:not(#ContentSelectDropdownPopup) > menuitem,
 #context-navigation > .menuitem-iconic,
 popup > menu,
 popup > menuitem {
@@ -520,8 +521,8 @@ popup > menuitem {
 .subviewbutton[focused],
 panel toolbarbutton:hover,
 #context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]),
-menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]),
-menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup:not(#ContentSelectDropdownPopup) > menu[_moz-menuactive="true"]:not([disabled="true"]),
+menupopup:not(#ContentSelectDropdownPopup) > menuitem[_moz-menuactive="true"]:not([disabled="true"]),
 popup > menu[_moz-menuactive="true"]:not([disabled="true"]),
 popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
   background-color: #FFB900 !important;
@@ -534,8 +535,8 @@ popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) {
 .subviewbutton[focused] *,
 panel toolbarbutton:hover *,
 #context-navigation > .menuitem-iconic[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
-menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
-menupopup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+menupopup:not(#ContentSelectDropdownPopup) > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
+menupopup:not(#ContentSelectDropdownPopup) > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
 popup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox),
 popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text, .menu-accel, .menu-icon, .menu-highlightable-text, label, image, hbox) {
   color: #000000 !important;
@@ -607,14 +608,14 @@ popup > menuitem[_moz-menuactive="true"]:not([disabled="true"]) > :is(.menu-text
   background-color: #FFB900 !important;
 }
 
-menupopup > menu[_moz-menuactive="true"]:not([disabled="true"])::after,
+menupopup:not(#ContentSelectDropdownPopup) > menu[_moz-menuactive="true"]:not([disabled="true"])::after,
 popup > menu[_moz-menuactive="true"]:not([disabled="true"])::after {
   fill: #000000 !important;
   fill-opacity: 1 !important;
 }
 
-menupopup > menu[disabled="true"],
-menupopup > menuitem[disabled="true"],
+menupopup:not(#ContentSelectDropdownPopup) > menu[disabled="true"],
+menupopup:not(#ContentSelectDropdownPopup) > menuitem[disabled="true"],
 #context-navigation > .menuitem-iconic[disabled="true"],
 popup > menu[disabled="true"],
 popup > menuitem[disabled="true"],
