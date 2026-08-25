@@ -15,6 +15,7 @@ the shared palette and component rules.
 | Firefox | [`firefox/`](firefox/) | Profile CSS theme with [installation instructions](firefox/README.md) |
 | Global websites | [`global-userstyle/global-style.styl`](global-userstyle/global-style.styl) | Stylus userstyle with optional font and CRT settings |
 | Global font | [`global-userstyle/global-font-only.styl`](global-userstyle/global-font-only.styl) | Font-only Stylus userstyle |
+| Glow | [`glow/amber-black.json`](glow/amber-black.json) | Glamour JSON stylesheet for markdown rendering |
 | micro | [`micro/amber-black.micro`](micro/amber-black.micro) | micro colorscheme |
 | OpenCode | [`opencode-cli/amber-black.json`](opencode-cli/amber-black.json) | OpenCode JSON theme |
 | WhatsApp Web | [`whatsapp/wsp.user.styl`](whatsapp/wsp.user.styl) | Stylus userstyle |
@@ -28,6 +29,9 @@ the shared palette and component rules.
   `.styl` source.
 - micro: copy `amber-black.micro` into the micro colorschemes directory and
   select `amber-black` as the colorscheme.
+- Glow: run `glow -s glow/amber-black.json`, or copy the file to
+  `~/.config/glow/styles/` (`%LOCALAPPDATA%\glow\styles\` on Windows) and set
+  `style: "<path to amber-black.json>"` in `glow.yml`.
 - Other JSON themes: import or copy the file using the target application's
   custom-theme mechanism.
 
