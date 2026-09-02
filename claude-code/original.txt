@@ -1,13 +1,23 @@
-Find latest original Claude Code built-in dark theme source. Search official docs, npm package source/maps for @anthropic-ai/claude-code, and reputable GitHub mirrors. Prefer newest released version. Locate theme token definitions, especially const darkTheme or equivalent. Return source links, version number, file path, and full dark theme token map. Do not use community theme repos as source of truth unless they cite original upstream.
+Reference snapshot of the Claude Code built-in dark theme.
 
-https://github.com/Exhen/claude-code-2.1.88
+Version: 2.1.258
+Source:  C:/Users/superuser/AppData/Roaming/npm/node_modules/@anthropic-ai/claude-code/bin/claude.exe
 
+Extraction: the six built-in themes are stored as plain object literals in the
+bundled JavaScript, near byte offset 184,618,000. The default dark theme is the
+object named B, returned by the default branch of the theme switch. Object.hasOwn(B, key)
+is the override validator, so the key set of B is exactly the set of legal override keys.
+
+To refresh: grep -a -b -o claudeBlue_FOR_SYSTEM_SPINNER on the binary, dd out the
+surrounding region, then take the fifth object literal in the theme table.
 
 {
-  "name": "Original Claude Code Dark Detailed",
+  "name": "Claude Code Dark (built-in)",
   "base": "dark",
   "overrides": {
     "autoAccept": "rgb(175,135,255)",
+    "autoAcceptShimmer": "rgb(208,180,255)",
+    "skill": "rgb(175,135,255)",
     "bashBorder": "rgb(253,93,177)",
     "claude": "rgb(215,119,87)",
     "claudeShimmer": "rgb(235,159,127)",
@@ -39,27 +49,28 @@ https://github.com/Exhen/claude-code-2.1.88
     "diffAddedWord": "rgb(56,166,96)",
     "diffRemovedWord": "rgb(179,89,107)",
     "red_FOR_SUBAGENTS_ONLY": "rgb(220,38,38)",
-    "blue_FOR_SUBAGENTS_ONLY": "rgb(37,99,235)",
+    "blue_FOR_SUBAGENTS_ONLY": "rgb(106,155,204)",
     "green_FOR_SUBAGENTS_ONLY": "rgb(22,163,74)",
     "yellow_FOR_SUBAGENTS_ONLY": "rgb(202,138,4)",
-    "purple_FOR_SUBAGENTS_ONLY": "rgb(147,51,234)",
-    "orange_FOR_SUBAGENTS_ONLY": "rgb(234,88,12)",
-    "pink_FOR_SUBAGENTS_ONLY": "rgb(219,39,119)",
+    "purple_FOR_SUBAGENTS_ONLY": "rgb(130,125,189)",
+    "orange_FOR_SUBAGENTS_ONLY": "rgb(217,119,87)",
+    "pink_FOR_SUBAGENTS_ONLY": "rgb(196,102,134)",
     "cyan_FOR_SUBAGENTS_ONLY": "rgb(8,145,178)",
     "professionalBlue": "rgb(106,155,204)",
     "chromeYellow": "rgb(251,188,4)",
     "clawd_body": "rgb(215,119,87)",
     "clawd_background": "rgb(0,0,0)",
-    "userMessageBackground": "rgb(55,55,55)",
-    "userMessageBackgroundHover": "rgb(70,70,70)",
-    "messageActionsBackground": "rgb(44,50,62)",
-    "selectionBg": "rgb(38,79,120)",
-    "bashMessageBackgroundColor": "rgb(65,60,65)",
-    "memoryBackgroundColor": "rgb(55,65,70)",
+    "userMessageBackground": "rgb(55, 55, 55)",
+    "userMessageBackgroundHover": "rgb(70, 70, 70)",
+    "composerSidebarBackground": "rgb(38, 38, 38)",
+    "selectionBg": "rgb(38, 79, 120)",
+    "bashMessageBackgroundColor": "rgb(65, 60, 65)",
+    "memoryBackgroundColor": "rgb(55, 65, 70)",
     "rate_limit_fill": "rgb(177,185,249)",
     "rate_limit_empty": "rgb(80,83,112)",
     "fastMode": "rgb(255,120,20)",
     "fastModeShimmer": "rgb(255,165,70)",
+    "effortUltra": "rgb(175,135,255)",
     "briefLabelYou": "rgb(122,180,232)",
     "briefLabelClaude": "rgb(215,119,87)",
     "rainbow_red": "rgb(235,95,87)",
