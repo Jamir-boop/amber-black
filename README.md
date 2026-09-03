@@ -18,6 +18,7 @@ the shared palette and component rules.
 | Glow | [`glow/amber-black.json`](glow/amber-black.json) | Glamour JSON stylesheet for markdown rendering |
 | micro | [`micro/amber-black.micro`](micro/amber-black.micro) | micro colorscheme |
 | OpenCode | [`opencode-cli/amber-black.json`](opencode-cli/amber-black.json) | OpenCode JSON theme |
+| Typora | [`typora/amber-black.css`](typora/amber-black.css) | Markdown editor theme with a block caret |
 | WhatsApp Web | [`whatsapp/wsp.user.styl`](whatsapp/wsp.user.styl) | Stylus userstyle |
 
 ## Installation
@@ -32,6 +33,11 @@ the shared palette and component rules.
 - Glow: run `glow -s glow/amber-black.json`, or copy the file to
   `~/.config/glow/styles/` (`%LOCALAPPDATA%\glow\styles\` on Windows) and set
   `style: "<path to amber-black.json>"` in `glow.yml`.
+- Typora: copy `typora/amber-black.css` into the themes directory
+  (`%APPDATA%\Typora\themes\` on Windows, `~/.config/Typora/themes/` on Linux,
+  `~/Library/Application Support/abnerworks.Typora/themes/` on macOS), restart
+  Typora, then select `Amber Black` under Themes. The block caret needs Typora
+  1.14 or later, which ships a Chromium with `caret-shape` support.
 - Other JSON themes: import or copy the file using the target application's
   custom-theme mechanism.
 
