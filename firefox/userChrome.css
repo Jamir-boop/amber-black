@@ -1,3 +1,5 @@
+@import url("minimalFox.css");
+
 /* Amber black Firefox chrome.
    Put this file in <profile>/chrome/userChrome.css.
    Copy img/background.gif to <profile>/chrome/img/background.gif. */
@@ -99,6 +101,10 @@ findbar {
   box-shadow: none !important;
 }
 
+#nav-bar {
+  background: #000000 !important;
+}
+
 toolbarbutton,
 toolbarbutton > .toolbarbutton-icon,
 toolbarbutton > .toolbarbutton-text,
@@ -179,6 +185,7 @@ toolbarbutton:active > *,
 }
 
 #urlbar-background,
+.urlbar-background,
 #searchbar,
 findbar,
 .findbar-textbox {
@@ -188,7 +195,17 @@ findbar,
   box-shadow: none !important;
 }
 
-#urlbar[focused="true"] #urlbar-background,
+#urlbar-background,
+.urlbar-background {
+  background-image: none !important;
+}
+
+#urlbar:is([focused], [open]) :is(#urlbar-background, .urlbar-background) {
+  background-color: #000000 !important;
+  border-color: #FFB900 !important;
+  box-shadow: 0 0 0 1px #FFB900 !important;
+}
+
 #searchbar:focus-within,
 .findbar-textbox:focus {
   background-color: #050505 !important;
@@ -202,6 +219,14 @@ findbar,
 .searchbar-textbox,
 .findbar-textbox {
   color: #FFFFFF !important;
+}
+
+/* Semi-transparent amber block caret.
+   Keeps character under caret readable. */
+#urlbar-input,
+.searchbar-textbox,
+.findbar-textbox {
+  caret-color: rgb(255 185 0 / 35%) !important;
 }
 
 #urlbar ::selection,
@@ -218,6 +243,11 @@ findbar,
   background-color: #000000 !important;
   color: #FFFFFF !important;
   border-color: #332500 !important;
+}
+
+.urlbarView,
+.urlbarView-body-inner {
+  background-color: transparent !important;
 }
 
 .urlbarView-row,
@@ -261,7 +291,9 @@ panelmultiview,
 menupopup:not(#ContentSelectDropdownPopup),
 popup {
   --panel-background: #000000 !important;
+  --panel-background-color: #000000 !important;
   --panel-color: #ffb900 !important;
+  --panel-text-color: #FFFFFF !important;
   --panel-border-color: #FFB900 !important;
   --panel-border-radius: 0 !important;
   --arrowpanel-border-radius: 0 !important;

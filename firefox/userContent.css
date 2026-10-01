@@ -1,6 +1,13 @@
 /* Amber black Firefox content.
    Put this file in <profile>/chrome/userContent.css. */
 
+/* Caret for normal websites and Firefox content pages. */
+input,
+textarea,
+[contenteditable]:not([contenteditable="false"]) {
+  caret-color: rgb(255 185 0 / 35%) !important;
+}
+
 @-moz-document url-prefix("about:") {
   :root {
     color-scheme: dark !important;
@@ -21,6 +28,53 @@
     --amber-border: #332500;
     --amber-border-strong: #664A00;
     --amber-font: "Cascadia Mono", "Cascadia Code", monospace;
+
+    /* Current Firefox tokens also reach native shadow controls. */
+    --color-accent-primary: var(--amber-accent) !important;
+    --color-accent-primary-hover: var(--amber-hover) !important;
+    --color-accent-primary-active: var(--amber-active) !important;
+    --color-accent-primary-selected: var(--amber-accent) !important;
+    --color-accent-attention: var(--amber-accent) !important;
+    --background-color-canvas: var(--amber-bg) !important;
+    --background-color-box-info: var(--amber-bg) !important;
+    --background-color-list-item-hover: var(--amber-hover) !important;
+    --text-color: var(--amber-text) !important;
+    --text-color-deemphasized: var(--amber-muted) !important;
+    --text-color-disabled: var(--amber-disabled) !important;
+    --text-color-list-item-hover: var(--amber-bg) !important;
+    --text-color-accent-primary-selected: var(--amber-bg) !important;
+    --icon-color: currentColor !important;
+    --border-color: var(--amber-border) !important;
+    --border-color-deemphasized: var(--amber-border) !important;
+    --border-color-interactive: var(--amber-border-strong) !important;
+    --border-color-interactive-hover: var(--amber-accent) !important;
+    --border-color-interactive-active: var(--amber-accent) !important;
+    --border-color-interactive-disabled: var(--amber-border) !important;
+    --card-border-color: var(--amber-border) !important;
+    --table-background-color: var(--amber-bg) !important;
+    --table-border-color: var(--amber-border) !important;
+    --table-header-background-color: var(--amber-accent) !important;
+    --table-header-text-color: var(--amber-bg) !important;
+    --table-row-background-color: var(--amber-bg) !important;
+    --table-row-background-color-alternate: var(--amber-surface-1) !important;
+    --button-background-color: var(--amber-bg) !important;
+    --button-background-color-hover: var(--amber-hover) !important;
+    --button-background-color-active: var(--amber-active) !important;
+    --button-text-color: var(--amber-text) !important;
+    --button-text-color-hover: var(--amber-bg) !important;
+    --button-text-color-active: var(--amber-bg) !important;
+    --button-text-color-primary: var(--amber-bg) !important;
+    --button-text-color-ghost-hover: var(--amber-bg) !important;
+    --button-text-color-ghost-active: var(--amber-bg) !important;
+    --button-border-color: var(--amber-border) !important;
+    --button-border-color-hover: var(--amber-accent) !important;
+    --button-border-color-active: var(--amber-accent) !important;
+    --button-border-color-primary: var(--amber-accent) !important;
+    --input-text-background-color: var(--amber-bg) !important;
+    --input-text-color: var(--amber-text) !important;
+    --link-color: var(--amber-accent) !important;
+    --link-color-hover: var(--amber-hover) !important;
+    --link-color-active: var(--amber-active) !important;
 
     --in-content-page-background: #000000 !important;
     --in-content-page-color: #FFFFFF !important;
@@ -118,7 +172,7 @@
   }
 
   button,
-  input,
+  input:not([type="checkbox"], [type="radio"]),
   select,
   textarea,
   richlistitem,
@@ -127,6 +181,7 @@
   menulist {
     background-color: #000000 !important;
     color: #FFFFFF !important;
+    fill: currentColor !important;
     border-color: #332500 !important;
   }
 
@@ -136,14 +191,14 @@
   }
 
   select:hover,
-  input:hover,
+  input:hover:not([type="checkbox"], [type="radio"]),
   textarea:hover {
     background-color: #000000 !important;
     color: #FFFFFF !important;
     border-color: #FFB900 !important;
   }
 
-  button:hover,
+  button:hover:not(:disabled):not([disabled="true"]),
   richlistitem:hover,
   tr:hover,
   .list-item:hover,
@@ -155,15 +210,17 @@
     stroke: #000000 !important;
   }
 
-  button:hover *,
-  richlistitem:hover *,
-  tr:hover *,
-  .list-item:hover *,
-  .category:hover *,
-  .sidebar-footer-link:hover * {
+  button:hover:not(:disabled):not([disabled="true"]) *,
+  :is(richlistitem:hover, tr:hover, .list-item:hover, .category:hover, .sidebar-footer-link:hover)
+    :not(button, input, select, textarea, menulist, moz-button,
+      :is(button, input, select, textarea, menulist, moz-button) *) {
     color: #000000 !important;
     fill: #000000 !important;
     stroke: #000000 !important;
+  }
+
+  summary[part~="summary"]:hover {
+    color: #000000 !important;
   }
 
   button:focus-visible,
@@ -229,12 +286,9 @@
     stroke: #000000 !important;
   }
 
-  [selected] *,
-  .selected *,
-  [aria-selected="true"] *,
-  .category[selected] *,
-  richlistitem[selected] *,
-  tr[selected] * {
+  :is([selected], .selected, [aria-selected="true"], .category[selected], richlistitem[selected], tr[selected])
+    :not(button, input, select, textarea, menulist, moz-button,
+      :is(button, input, select, textarea, menulist, moz-button) *) {
     color: #000000 !important;
     fill: #000000 !important;
     stroke: #000000 !important;
