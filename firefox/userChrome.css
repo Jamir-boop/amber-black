@@ -151,6 +151,10 @@ toolbarbutton:active > *,
   stroke: #000000 !important;
 }
 
+.tab-background {
+  border-radius: 0 !important;
+}
+
 .tabbrowser-tab:not([selected="true"]) {
   color: #A0A0A0 !important;
 }
@@ -166,7 +170,8 @@ toolbarbutton:active > *,
 .tabbrowser-tab[selected="true"] > .tab-stack > .tab-background {
   background-color: #000000 !important;
   background-image: none !important;
-  border: 1px solid #FFB900 !important;
+  border: 0 !important;
+  border-bottom: 1px solid #FFB900 !important;
   box-shadow: none !important;
   outline: none !important;
 }
