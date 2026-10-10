@@ -1,0 +1,198 @@
+{
+  "title": "Ten amber-only UI options",
+  "date": "2026-10-09",
+  "generator": "Built-in ImageGen",
+  "scope": "Generated concepts with synthetic content. Target colors are approximate. No native UI or accessibility certification.",
+  "options": [
+    {
+      "n": "01",
+      "slug": "soft-amber",
+      "name": "Soft Amber",
+      "description": "Warm charcoal and a soft amber action.",
+      "colors": {
+        "canvas": "#1C1A18",
+        "panel": "#24211E",
+        "field": "#171513",
+        "row": "#36312C",
+        "text": "#E9E4DC",
+        "muted": "#B7AEA3",
+        "accent": "#D8B56B"
+      },
+      "note": "Restrained warm charcoal, warm ivory content, softened gold on the small primary action and keyboard focus. This is the closest gentle alternative to Amber Black.",
+      "filename": "01-soft-amber.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 01: Soft Amber. Restrained warm charcoal, warm ivory content, softened gold on the small primary action and keyboard focus. This is the closest gentle alternative to Amber Black.\nTarget colors: canvas #1C1A18; panel #24211E; inset field #171513; selected row #36312C; primary text #E9E4DC; secondary text #B7AEA3; amber action and focus #D8B56B. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"01 / Soft Amber\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-a816b8f9-873e-4e99-bd06-58e43cbe70f0.png"
+    },
+    {
+      "n": "02",
+      "slug": "honey-graphite",
+      "name": "Honey Graphite",
+      "description": "Neutral graphite with muted honey gold.",
+      "colors": {
+        "canvas": "#1E1E1D",
+        "panel": "#282725",
+        "field": "#191918",
+        "row": "#37332A",
+        "text": "#E6E2D8",
+        "muted": "#B6AFA1",
+        "accent": "#CBAA60"
+      },
+      "note": "More neutral graphite than brown, honey accent with low saturation. Quiet flat panels and only small golden cues.",
+      "filename": "02-honey-graphite.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 02: Honey Graphite. More neutral graphite than brown, honey accent with low saturation. Quiet flat panels and only small golden cues.\nTarget colors: canvas #1E1E1D; panel #282725; inset field #191918; selected row #37332A; primary text #E6E2D8; secondary text #B6AFA1; amber action and focus #CBAA60. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"02 / Honey Graphite\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-5e1e611b-0003-40e7-ad0e-67f8cd8d1856.png"
+    },
+    {
+      "n": "03",
+      "slug": "sandstone",
+      "name": "Sandstone",
+      "description": "Lifted taupe surfaces and soft golden sand.",
+      "colors": {
+        "canvas": "#2B251E",
+        "panel": "#362E24",
+        "field": "#251F19",
+        "row": "#483C2C",
+        "text": "#EEE2CF",
+        "muted": "#C5B397",
+        "accent": "#D9B77B"
+      },
+      "note": "Lighter, warmer taupe surfaces than a conventional dark theme. Muted golden sand rather than bright yellow. Calm tonal separation.",
+      "filename": "03-sandstone.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 03: Sandstone. Lighter, warmer taupe surfaces than a conventional dark theme. Muted golden sand rather than bright yellow. Calm tonal separation.\nTarget colors: canvas #2B251E; panel #362E24; inset field #251F19; selected row #483C2C; primary text #EEE2CF; secondary text #C5B397; amber action and focus #D9B77B. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"03 / Sandstone\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-aa481012-df17-47f9-81aa-1206b95b011d.png"
+    },
+    {
+      "n": "04",
+      "slug": "toasted-amber",
+      "name": "Toasted Amber",
+      "description": "Orange amber on dark warm surfaces.",
+      "colors": {
+        "canvas": "#211A14",
+        "panel": "#2D231B",
+        "field": "#19140F",
+        "row": "#3E2F22",
+        "text": "#F0E1CE",
+        "muted": "#BDA990",
+        "accent": "#DDA04C"
+      },
+      "note": "The amber is toward toasted orange, distinctly warmer than honey yellow, but never red. Use small burnt-gold cues against warm dark neutral panels.",
+      "filename": "04-toasted-amber.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 04: Toasted Amber. The amber is toward toasted orange, distinctly warmer than honey yellow, but never red. Use small burnt-gold cues against warm dark neutral panels.\nTarget colors: canvas #211A14; panel #2D231B; inset field #19140F; selected row #3E2F22; primary text #F0E1CE; secondary text #BDA990; amber action and focus #DDA04C. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"04 / Toasted Amber\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-a1455ba8-4b5c-474a-9bad-ba9531a89df6.png"
+    },
+    {
+      "n": "05",
+      "slug": "smoked-brass",
+      "name": "Smoked Brass",
+      "description": "Desaturated brass on neutral charcoal.",
+      "colors": {
+        "canvas": "#222221",
+        "panel": "#2B2B28",
+        "field": "#1C1C1A",
+        "row": "#39362F",
+        "text": "#E4E0D7",
+        "muted": "#B5AFA2",
+        "accent": "#BFA36A"
+      },
+      "note": "The least saturated golden accent: matte smoked brass. Do not depict metal textures; it is a flat, quiet working UI. Mostly neutral gray with warm small accents.",
+      "filename": "05-smoked-brass.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 05: Smoked Brass. The least saturated golden accent: matte smoked brass. Do not depict metal textures; it is a flat, quiet working UI. Mostly neutral gray with warm small accents.\nTarget colors: canvas #222221; panel #2B2B28; inset field #1C1C1A; selected row #39362F; primary text #E4E0D7; secondary text #B5AFA2; amber action and focus #BFA36A. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"05 / Smoked Brass\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-e5827819-ad2d-4c24-a14c-e292d2fc351e.png"
+    },
+    {
+      "n": "06",
+      "slug": "deep-umber",
+      "name": "Deep Umber",
+      "description": "Deep brown-black and restrained honey cues.",
+      "colors": {
+        "canvas": "#17130E",
+        "panel": "#211B14",
+        "field": "#100E0A",
+        "row": "#30271B",
+        "text": "#E6D9C4",
+        "muted": "#B9A488",
+        "accent": "#C89B52"
+      },
+      "note": "Deep umber surfaces, soft parchment text, darker honey action color. Intimate low-glare dark UI with clear text, no pure white.",
+      "filename": "06-deep-umber.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 06: Deep Umber. Deep umber surfaces, soft parchment text, darker honey action color. Intimate low-glare dark UI with clear text, no pure white.\nTarget colors: canvas #17130E; panel #211B14; inset field #100E0A; selected row #30271B; primary text #E6D9C4; secondary text #B9A488; amber action and focus #C89B52. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"06 / Deep Umber\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-bbdeaf1f-2ba3-446d-887b-3de9dbd9f259.png"
+    },
+    {
+      "n": "07",
+      "slug": "amber-ash",
+      "name": "Amber Ash",
+      "description": "Medium warm gray with pale amber.",
+      "colors": {
+        "canvas": "#37332D",
+        "panel": "#433E35",
+        "field": "#2E2A24",
+        "row": "#554B3B",
+        "text": "#F1E9DC",
+        "muted": "#D0C2AC",
+        "accent": "#E1BE75"
+      },
+      "note": "A visibly MID-TONE theme, distinctly lighter than the other dark options. Warm ash-gray canvas and panels, pale amber action. Reduce the black-to-white jump through the lifted ground.",
+      "filename": "07-amber-ash.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 07: Amber Ash. A visibly MID-TONE theme, distinctly lighter than the other dark options. Warm ash-gray canvas and panels, pale amber action. Reduce the black-to-white jump through the lifted ground.\nTarget colors: canvas #37332D; panel #433E35; inset field #2E2A24; selected row #554B3B; primary text #F1E9DC; secondary text #D0C2AC; amber action and focus #E1BE75. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"07 / Amber Ash\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-89a2e09a-c8a5-4e99-94ce-16bb7dfc16a6.png"
+    },
+    {
+      "n": "08",
+      "slug": "parchment",
+      "name": "Parchment",
+      "description": "Light warm parchment with deep amber actions.",
+      "colors": {
+        "canvas": "#F2EBDD",
+        "panel": "#FCF6E9",
+        "field": "#FFFBF1",
+        "row": "#E7D7B8",
+        "text": "#403426",
+        "muted": "#75634B",
+        "accent": "#94651D"
+      },
+      "note": "A LIGHT theme. Warm parchment ground, deep umber text, dark amber actions with pale text. Matte flat ivory, no paper grain, no pure-white glare, no dark sidebar.",
+      "filename": "08-parchment.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 08: Parchment. A LIGHT theme. Warm parchment ground, deep umber text, dark amber actions with pale text. Matte flat ivory, no paper grain, no pure-white glare, no dark sidebar.\nTarget colors: canvas #F2EBDD; panel #FCF6E9; inset field #FFFBF1; selected row #E7D7B8; primary text #403426; secondary text #75634B; amber action and focus #94651D. Primary action uses light cream ink. Add only a small unobtrusive footer label \"08 / Parchment\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-d8f21334-dda6-4891-95fb-179d386dafcc.png"
+    },
+    {
+      "n": "09",
+      "slug": "honey-mist",
+      "name": "Honey Mist",
+      "description": "Pale honey cream with a richer amber focus.",
+      "colors": {
+        "canvas": "#F8F0D8",
+        "panel": "#FFF8E7",
+        "field": "#FFFCEF",
+        "row": "#EDD9A7",
+        "text": "#493817",
+        "muted": "#79613A",
+        "accent": "#98650B"
+      },
+      "note": "A LIGHT distinctly honey-tinted theme, more golden and sunny than neutral parchment. Pale buttery amber surfaces and strong readable dark golden-brown text, amber-colored small action button, no yellow screen wash.",
+      "filename": "09-honey-mist.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 09: Honey Mist. A LIGHT distinctly honey-tinted theme, more golden and sunny than neutral parchment. Pale buttery amber surfaces and strong readable dark golden-brown text, amber-colored small action button, no yellow screen wash.\nTarget colors: canvas #F8F0D8; panel #FFF8E7; inset field #FFFCEF; selected row #EDD9A7; primary text #493817; secondary text #79613A; amber action and focus #98650B. Primary action uses light cream ink. Add only a small unobtrusive footer label \"09 / Honey Mist\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-f8910d4b-c504-4c82-aad5-f95c5d79ea32.png"
+    },
+    {
+      "n": "10",
+      "slug": "quiet-oled",
+      "name": "Quiet OLED",
+      "description": "Pure black with soft text and limited amber.",
+      "colors": {
+        "canvas": "#000000",
+        "panel": "#0D0C0A",
+        "field": "#050504",
+        "row": "#242017",
+        "text": "#DDD5C7",
+        "muted": "#AAA091",
+        "accent": "#C7A45E"
+      },
+      "note": "Keep the PURE BLACK canvas from Amber Black but reduce visual weight: soft warm-gray text, small desaturated amber action, dark selected rows. No large solid yellow rows, no bright white panels.",
+      "filename": "10-quiet-oled.png",
+      "prompt": "Use case: ui-mockup. Create one high-fidelity desktop application UI concept, edge to edge in a landscape 1536 by 1024 composition. This is an amber-only palette comparison for practical automation tools, with synthetic sample data. Flat crisp UI, highly legible system sans, regular-weight body, concise labels, compact spacing with enough breathing room. No device, desk, browser chrome, poster, photography, grain, gradients, glow, glass, ornamental artwork, or giant headline.\nKeep this same arrangement and content in every option: a slim top toolbar with title \"Task review\" and search; narrow left navigation \"Workspace\", \"Tasks\", \"Activity\", \"Settings\"; center \"Daily report\" task list with columns \"Task\" and \"State\", four rows \"Load file\", \"Check filename\", \"Save report\", \"Archive file\", and states \"Ready\", \"Needs input\", \"Ready\", \"Waiting\"; \"Check filename\" is selected with a quiet tonal row fill and a small amber outline. Right panel \"Task properties\" has \"Output filename\" with \"report.csv\", \"Workspace\" with read-only \"Local sample\", a disabled \"Schedule\" field, and a small primary \"Apply changes\" plus neutral secondary \"Cancel\". Include one compact amber warning with a warning icon and text \"Name required\". Bottom code line: output_file = \"report.csv\". Footer \"Synthetic preview\".\nOnly amber/gold hues and their warm neutral tints and shades, black, gray, cream, and ivory. Absolutely no blue, green, red, purple, teal, or pink, including icons, code, and status colors. Convey status through text and outline icon shape. Accent fills occupy less than 8% of the screen. Most surfaces remain quiet neutrals. Keep readable text, clear field edges and a visible small focus outline. Plain monochrome line icons. Target colors below guide the concept; do not print hex codes or swatches.\nOption 10: Quiet OLED. Keep the PURE BLACK canvas from Amber Black but reduce visual weight: soft warm-gray text, small desaturated amber action, dark selected rows. No large solid yellow rows, no bright white panels.\nTarget colors: canvas #000000; panel #0D0C0A; inset field #050504; selected row #242017; primary text #DDD5C7; secondary text #AAA091; amber action and focus #C7A45E. Primary action uses dark warm ink. Add only a small unobtrusive footer label \"10 / Quiet OLED\" for identification.",
+      "generatedFrom": "/home/superuser/.codex/generated_images/01a123d8-1a0a-7993-9260-20dcf687c604/exec-d41c751d-ee98-489c-be85-ee7961fa6c92.png"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+/* Choose one profile on an owned root. These tokens do not style native controls. */
+[data-theme="amber-black"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #080808;
+  --field: #000000;
+  --interaction: #101010;
+  --text: #FFFFFF;
+  --muted: #A0A0A0;
+  --disabled: #555555;
+  --border: #332500;
+  --control: #FFB900;
+  --reference: #FFB900;
+  --accent: #FFB900;
+  --error: #FFB900;
+  --success: #FFB900;
+  --selection: #FFB900;
+  --selection-ink: #000000;
+  --action-ink: #000000;
+}
+
+[data-theme="warm-charcoal"] {
+  color-scheme: dark;
+  --bg: #1C1A18;
+  --surface: #24211E;
+  --field: #171513;
+  --interaction: #36312C;
+  --text: #E9E4DC;
+  --muted: #B7AEA3;
+  --disabled: #555555;
+  --border: #423B34;
+  --control: #8C8175;
+  --reference: #A8C0DC;
+  --accent: #D8B56B;
+  --error: #EB8C88;
+  --success: #93C9AD;
+  --selection: #FFBA30;
+  --selection-ink: #111113;
+  --action-ink: #111113;
+}
+
+[data-theme="slate-blue"] {
+  color-scheme: dark;
+  --bg: #1B2027;
+  --surface: #232A33;
+  --field: #161B21;
+  --interaction: #303B47;
+  --text: #E0E7EE;
+  --muted: #AAB7C5;
+  --disabled: #AAB7C5;
+  --border: #3E4B59;
+  --control: #7F90A3;
+  --reference: #C4B4DF;
+  --accent: #9BBBDD;
+  --error: #EBA6A1;
+  --success: #9CC8B0;
+  --selection: #AFCFE8;
+  --selection-ink: #17212B;
+  --action-ink: #17212B;
+}
+
+[data-theme="sage-paper"] {
+  color-scheme: light;
+  --bg: #F3F4EE;
+  --surface: #F9FAF5;
+  --field: #FFFFFF;
+  --interaction: #E5EADF;
+  --text: #29362E;
+  --muted: #526255;
+  --disabled: #526255;
+  --border: #D0D8CD;
+  --control: #788775;
+  --reference: #3F6174;
+  --accent: #49694E;
+  --error: #A04037;
+  --success: #426C4E;
+  --selection: #CADBC2;
+  --selection-ink: #243629;
+  --action-ink: #FFFFFF;
+}

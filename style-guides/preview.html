@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-theme="warm-charcoal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theme comparison | Amber Black</title>
+  <link rel="stylesheet" href="palettes.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { background: var(--bg); color: var(--text); scrollbar-color: var(--control) var(--field); }
+    body { margin: 0; font: 1rem/1.5 system-ui, sans-serif; }
+    main { max-width: 1080px; margin: auto; padding: 32px; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 1.875rem; line-height: 1.2; font-weight: 650; }
+    h2 { font-size: 1.25rem; line-height: 1.3; font-weight: 650; }
+    h3 { font-size: 1rem; font-weight: 650; }
+    p { max-width: 70ch; }
+    a { color: var(--reference); text-underline-offset: .2em; }
+    a:hover { text-decoration-thickness: 2px; }
+    button, input, select { font: inherit; }
+    button, select { cursor: pointer; }
+    input, select, .action { min-height: 44px; border: 1px solid var(--control); border-radius: 4px; background: var(--field); color: var(--text); padding: 9px 12px; }
+    input, select { width: 100%; caret-color: var(--accent); }
+    input::placeholder { color: var(--muted); opacity: 1; }
+    :is(button, input, select, a):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    input[aria-invalid="true"] { border-color: var(--error); }
+    input:disabled, button:disabled { color: var(--disabled); cursor: not-allowed; opacity: 1; }
+    label { display: block; margin-bottom: 6px; font-weight: 600; }
+    .muted, .task-type { color: var(--muted); }
+    .success { color: var(--success); }
+    .error { color: var(--error); }
+    .intro { display: grid; grid-template-columns: 1fr 240px; gap: 32px; align-items: start; margin: 24px 0 32px; }
+    .intro p { margin-top: 12px; }
+    .theme-picker a { display: inline-block; margin-top: 8px; }
+    .sample { background: var(--surface); padding: 24px; border-top: 1px solid var(--border); }
+    .sample > p { margin-top: 6px; }
+    .workspace { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px; }
+    .tasks { list-style: none; margin: 12px 0 0; padding: 0; }
+    .tasks li + li { margin-top: 4px; }
+    .task { display: flex; gap: 16px; justify-content: space-between; width: 100%; min-height: 70px; text-align: left; padding: 10px 12px; color: var(--text); border: 1px solid transparent; border-radius: 4px; background: var(--bg); }
+    .task:hover, .task.selected { background: var(--interaction); }
+    .task.selected { border-color: var(--control); }
+    .task-name, .task-type, .task-state span { display: block; }
+    .task-type, .task-state { font-size: .875rem; }
+    .task-state { text-align: right; flex-shrink: 0; }
+    .task-state [hidden] { display: none; }
+    .selection-cue { color: var(--text); }
+    form > h3 { margin-bottom: 16px; }
+    .help, .field-error { font-size: .875rem; margin-top: 6px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .action:hover:enabled { background: var(--interaction); }
+    .primary, .primary:hover:enabled { background: var(--accent); border-color: var(--accent); color: var(--action-ink); font-weight: 600; }
+    .primary:hover:enabled { text-decoration: underline; text-underline-offset: .2em; }
+    #form-status { font-size: .875rem; min-height: 2.625em; margin-top: 12px; }
+    .specimens { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 32px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .specimens h3 { margin-bottom: 8px; }
+    .specimens p + p { margin-top: 4px; }
+    .loading { display: flex; align-items: center; gap: 10px; }
+    .loading::before { content: ""; width: 10px; height: 10px; border: 2px solid var(--accent); border-radius: 50%; flex-shrink: 0; }
+    pre { margin: 0; padding: 12px; background: var(--field); border: 1px solid var(--border); overflow-x: auto; font-size: .875rem; }
+    code { font-family: "Cascadia Code", ui-monospace, monospace; }
+    .reference { color: var(--reference); }
+    .comment { color: var(--muted); }
+    .selection-note { margin-top: 24px; font-size: .875rem; }
+    .selected-text { color: var(--selection-ink); background: var(--selection); }
+    ::selection { color: var(--selection-ink); background: var(--selection); }
+    footer { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; font-size: .875rem; }
+    [data-theme="amber-black"] .task:is(:hover, .selected) { background: var(--selection); color: var(--selection-ink); }
+    [data-theme="amber-black"] .task:is(:hover, .selected) :is(.task-type, .task-state span) { color: currentColor; }
+    [data-theme="amber-black"] .action:not(.primary):hover:enabled { background: var(--accent); color: var(--action-ink); }
+    @media (max-width: 760px) {
+      main { padding: 20px; }
+      .intro, .workspace { grid-template-columns: 1fr; gap: 24px; }
+      .theme-picker { max-width: 360px; }
+      .sample { padding: 20px; }
+      .specimens { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .code-specimen { grid-column: 1 / -1; }
+    }
+    @media (max-width: 440px) {
+      .sample { padding: 16px; }
+      .fields, .specimens { grid-template-columns: 1fr; }
+      .code-specimen { grid-column: auto; }
+      .task { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="README.md">Style guides</a>
+    <header class="intro">
+      <div>
+        <h1>Theme comparison</h1>
+        <p class="muted">Compare the same task UI in four palettes. All content is synthetic. These profiles are guides for reuse.</p>
+      </div>
+      <div class="theme-picker">
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="amber-black" data-guide="../amber-black-theme-style-guide.md">Amber Black</option>
+          <option value="warm-charcoal" data-guide="warm-charcoal.md" selected>Warm Charcoal</option>
+          <option value="slate-blue" data-guide="slate-blue.md">Slate Blue</option>
+          <option value="sage-paper" data-guide="sage-paper.md">Sage Paper</option>
+        </select>
+        <a id="theme-guide" href="warm-charcoal.md">Read selected guide</a>
+      </div>
+    </header>
+
+    <section class="sample" aria-labelledby="sample-title">
+      <h2 id="sample-title">Task review</h2>
+      <p class="muted">Select a sample task. The form changes a message in this page only.</p>
+      <div class="workspace">
+        <section aria-labelledby="tasks-title">
+          <h3 id="tasks-title">Sample tasks</h3>
+          <ul class="tasks">
+            <li><button class="task selected" type="button" aria-pressed="true" data-task="Rename downloaded file">
+              <span><span class="task-name">Rename downloaded file</span><span class="task-type">File task</span></span>
+              <span class="task-state"><span class="success">Ready</span><span class="selection-cue">Selected</span></span>
+            </button></li>
+            <li><button class="task" type="button" aria-pressed="false" data-task="Check report name">
+              <span><span class="task-name">Check report name</span><span class="task-type">Validation task</span></span>
+              <span class="task-state"><span class="error">Needs review</span><span class="selection-cue" hidden>Selected</span></span>
+            </button></li>
+            <li><button class="task" type="button" aria-pressed="false" data-task="Archive sample file">
+              <span><span class="task-name">Archive sample file</span><span class="task-type">File task</span></span>
+              <span class="task-state"><span class="muted">Waiting</span><span class="selection-cue" hidden>Selected</span></span>
+            </button></li>
+          </ul>
+        </section>
+
+        <form id="sample-form" novalidate aria-labelledby="detail-title">
+          <h3 id="detail-title">Rename downloaded file</h3>
+          <label for="filename">Output filename (required)</label>
+          <input id="filename" name="filename" type="text" required placeholder="Enter a filename" aria-invalid="true" aria-describedby="filename-help filename-error">
+          <p class="help muted" id="filename-help">Example: report.txt. No file is created.</p>
+          <p class="field-error error" id="filename-error">Enter a filename before you apply the sample change.</p>
+          <div class="fields">
+            <div><label for="workspace">Workspace (read-only)</label><input id="workspace" value="Local sample" readonly></div>
+            <div><label for="schedule">Schedule (disabled)</label><input id="schedule" value="Unavailable" disabled></div>
+          </div>
+          <div class="actions">
+            <button class="action primary" type="submit">Apply sample change</button>
+            <button class="action" id="reset-sample" type="button">Reset sample</button>
+            <button class="action" type="button" disabled>Run task</button>
+          </div>
+          <p id="form-status" class="muted" role="status">Changes stay in this page.</p>
+        </form>
+      </div>
+
+      <div class="specimens">
+        <section aria-labelledby="empty-title">
+          <h3 id="empty-title">Attachments</h3>
+          <p>No attachments.</p>
+          <p class="muted">Empty state specimen. A real tool would offer an upload action here.</p>
+        </section>
+        <section aria-labelledby="loading-title">
+          <h3 id="loading-title">Validation</h3>
+          <p class="loading">Checking sample…</p>
+          <p class="muted">Static loading specimen.</p>
+        </section>
+        <section class="code-specimen" aria-labelledby="code-title">
+          <h3 id="code-title">Code specimen</h3>
+          <pre><code><span class="comment"># Synthetic file value</span>
+<span class="reference">output_file</span> = <span class="success">"report.txt"</span></code></pre>
+        </section>
+      </div>
+      <p class="selection-note">Drag to select this text or text in a field. <span class="selected-text">Text selection specimen</span> uses a separate fill and ink. Selected rows keep their own state.</p>
+    </section>
+
+    <footer aria-label="Reference links">
+      <a href="README.md">Implementation and state rules</a>
+      <a href="palettes.css">Exact CSS tokens</a>
+      <a href="../amber-black-theme-style-guide.md">Original Amber Black guide</a>
+    </footer>
+  </main>
+  <script>
+    const theme = document.querySelector('#theme');
+    theme.addEventListener('change', () => {
+      document.documentElement.dataset.theme = theme.value;
+      document.querySelector('#theme-guide').href = theme.selectedOptions[0].dataset.guide;
+    });
+
+    const tasks = document.querySelectorAll('.task');
+    tasks.forEach(task => task.addEventListener('click', () => {
+      tasks.forEach(row => {
+        const selected = row === task;
+        row.classList.toggle('selected', selected);
+        row.setAttribute('aria-pressed', String(selected));
+        row.querySelector('.selection-cue').hidden = !selected;
+      });
+      document.querySelector('#detail-title').textContent = task.dataset.task;
+    }));
+
+    const form = document.querySelector('#sample-form');
+    const filename = document.querySelector('#filename');
+    const error = document.querySelector('#filename-error');
+    const status = document.querySelector('#form-status');
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const valid = filename.value.trim().length > 0;
+      filename.setAttribute('aria-invalid', String(!valid));
+      filename.setAttribute('aria-describedby', valid ? 'filename-help' : 'filename-help filename-error');
+      error.hidden = valid;
+      status.className = valid ? 'success' : 'muted';
+      status.textContent = valid ? `Sample change applied for "${filename.value.trim()}".` : 'Enter a filename, then apply the sample change.';
+      if (!valid) filename.focus();
+    });
+    document.querySelector('#reset-sample').addEventListener('click', () => {
+      form.reset();
+      filename.setAttribute('aria-invalid', 'true');
+      filename.setAttribute('aria-describedby', 'filename-help filename-error');
+      error.hidden = false;
+      status.className = 'muted';
+      status.textContent = 'Changes stay in this page.';
+    });
+  </script>
+</body>
+</html>

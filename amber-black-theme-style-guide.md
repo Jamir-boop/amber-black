@@ -70,7 +70,7 @@ JSON theme mapping:
 
 Base surfaces:
 - Main window, document, sidebar, panels, dialogs, popovers, menus, toolbars, tabs, inputs, and code blocks use black or near-black.
-- Borders use amber-brown dark values. Use borders before transparent amber fills.
+- Decorative borders use amber-brown dark values. Required control boundaries use solid `--accent`. Use borders before transparent amber fills.
 - Separators must be subtle, not gray-heavy.
 
 Text:
@@ -90,9 +90,28 @@ Icons and SVG:
 - Icons should inherit `currentColor`.
 - On black surfaces, icon color should be amber or white.
 - On amber hover/selection, icon color must be black.
-- Force SVG fill and stroke when needed.
+- Use `currentColor` only for each painted SVG channel. Keep `fill="none"` and `stroke="none"` unchanged.
+- If an icon has hardcoded paint, target only its owned painted shape and channel. Do not force both channels or all SVG descendants.
+
+These examples use one direct `.item-content` child per row or button. Its
+direct children use `.item-label`, `.item-icon`, `.item-shortcut`, or
+`.item-caret`. Add `.item-icon` to icon-font elements too. A submenu is a
+sibling of `.item-content`, never its child. Give every menu root, including
+each submenu, the `.menu` class to reset its background and text color.
 
 ```css
+.menu {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+.menu > .menu-item > .item-content,
+.row > .item-content,
+.button > .item-content {
+  color: inherit;
+}
+
 .menu-item:hover,
 .row:hover,
 .button:hover {
@@ -100,20 +119,28 @@ Icons and SVG:
   color: var(--text-on-accent) !important;
 }
 
-.menu-item:hover *,
-.row:hover *,
-.button:hover * {
-  color: currentColor !important;
+:is(.menu-item, .row, .button):hover > .item-content,
+:is(.menu-item, .row, .button):hover > .item-content > :is(.item-label, .item-icon, .item-shortcut, .item-caret),
+:is(.menu-item, .row, .button):hover > .item-content > .item-icon::before,
+:is(.menu-item, .row, .button):hover > .item-content > .item-icon::after {
+  color: var(--text-on-accent) !important;
   -webkit-text-fill-color: currentColor !important;
 }
+```
 
-.menu-item:hover svg,
-.menu-item:hover svg *,
-.row:hover svg,
-.row:hover svg * {
-  fill: currentColor !important;
-  stroke: currentColor !important;
-}
+Author SVG paint as shown below. Both icons inherit the row color. The outline
+keeps its open center and internal line on hover.
+
+```html
+<!-- Filled icon. -->
+<svg class="item-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+  <path d="M4 4h16v16H4z" />
+</svg>
+<!-- Outline icon. -->
+<svg class="item-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+  <rect x="4" y="4" width="16" height="16" />
+  <path d="M8 12h8" />
+</svg>
 ```
 
 Context menus:
@@ -127,7 +154,43 @@ Context menus:
 - Button groups inside menu rows should stay transparent on row hover.
 - Individual buttons inside menu rows may use subtle black overlay on hover.
 
+Use the same `.item-content` boundary. Each nested root needs
+`.context-menu`, which resets its own text color. Put buttons directly in
+`.item-content`. Their icons must inherit the button color.
+
+```html
+<ul class="context-menu">
+  <li>
+    <a class="item-content" href="/files">
+      <span class="item-label">Files</span>
+      <span class="item-caret" aria-hidden="true">&gt;</span>
+    </a>
+    <ul class="context-menu">
+      <li>
+        <a class="item-content" href="/files/open">
+          <span class="item-label">Open</span>
+          <span class="item-shortcut">Ctrl+O</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
+
+This markup shows ownership only. Keep the host's existing menu roles,
+open state, focus, and keyboard behavior.
+
 ```css
+.context-menu {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+.context-menu > li > .item-content {
+  color: inherit;
+}
+
 .context-menu,
 .context-menu *,
 menupopup,
@@ -137,40 +200,30 @@ menupopup > menuitem {
   border-radius: 0 !important;
 }
 
-.context-menu li:hover {
+.context-menu > li:hover {
   background: var(--accent) !important;
   color: var(--text-on-accent) !important;
 }
 
-.context-menu li:hover a,
-.context-menu li:hover span,
-.context-menu li:hover i,
-.context-menu li:hover .fa,
-.context-menu li:hover .ty-icon,
-.context-menu li:hover .fa::before,
-.context-menu li:hover .ty-icon::before,
-.context-menu li:hover .ty-icon::after {
+.context-menu > li:hover > .item-content,
+.context-menu > li:hover > .item-content > :is(.item-label, .item-icon, .item-shortcut, .item-caret),
+.context-menu > li:hover > .item-content > .item-icon::before,
+.context-menu > li:hover > .item-content > .item-icon::after {
   color: var(--text-on-accent) !important;
   -webkit-text-fill-color: currentColor !important;
 }
 
-.context-menu li:hover svg,
-.context-menu li:hover svg * {
-  fill: currentColor !important;
-  stroke: currentColor !important;
-}
-
-.context-menu li.has-btn-submenu:hover .menu-style-btn {
+.context-menu > li.has-btn-submenu:hover > .item-content > .menu-style-btn {
   background: transparent !important;
   color: var(--text-on-accent) !important;
   opacity: 1 !important;
 }
 
-.context-menu li.has-btn-submenu:hover .menu-style-btn:hover {
+.context-menu > li.has-btn-submenu:hover > .item-content > .menu-style-btn:hover {
   background: rgba(0, 0, 0, 0.16) !important;
 }
 
-.context-menu li.has-btn-submenu:hover .menu-style-btn.disabled {
+.context-menu > li.has-btn-submenu:hover > .item-content > .menu-style-btn.disabled {
   color: rgba(0, 0, 0, 0.45) !important;
   opacity: 1 !important;
 }
@@ -197,8 +250,6 @@ menupopup > menu[_moz-menuactive="true"]:not([disabled="true"]) > :is(
   .menu-highlightable-text
 ) {
   color: #000000 !important;
-  fill: #000000 !important;
-  stroke: #000000 !important;
 }
 ```
 
@@ -231,7 +282,7 @@ Firefox autoscroll:
 - Direction variants can use `[scrolldir="NS"]` and `[scrolldir="EW"]`.
 
 Inputs and buttons:
-- Inputs black, white text, amber border.
+- Inputs black, white text, solid `--accent` border. Use the same border for required control boundaries.
 - Focus uses amber ring.
 - Primary buttons solid amber with black text.
 - Secondary buttons black with amber border.
@@ -243,7 +294,7 @@ textarea,
 button {
   background: var(--bg);
   color: var(--text);
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent);
 }
 
 input:focus,

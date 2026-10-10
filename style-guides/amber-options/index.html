@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ten Amber UI Concepts · Amber Black</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ground: #191714;
+      --text: #f0e9dd;
+      --muted: #c4b8a5;
+      --amber: #e9b962;
+      --line: #514735;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ground);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      line-height: 1.55;
+      scrollbar-color: var(--line) var(--ground);
+    }
+    main { max-width: 1180px; margin: auto; padding: 40px 24px 64px; }
+    header { margin-bottom: 32px; }
+    h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.15; }
+    header p { max-width: 70ch; margin: 0 0 12px; color: var(--muted); }
+    a { color: var(--amber); text-underline-offset: 0.2em; }
+    a:hover { color: var(--text); }
+    a:focus-visible { outline: 2px solid var(--amber); outline-offset: 5px; }
+    ::selection { background: var(--amber); color: var(--ground); }
+    .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+    figure { margin: 0; min-width: 0; }
+    .image-link { display: block; }
+    img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+    figcaption { padding-top: 12px; }
+    h2 { margin: 0 0 4px; font-size: 1.1rem; line-height: 1.3; }
+    figcaption p { margin: 0 0 6px; color: var(--muted); }
+    figcaption a { font-size: 0.9rem; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+    @media (max-width: 700px) {
+      main { padding: 28px 16px 40px; }
+      .gallery { grid-template-columns: 1fr; gap: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Ten amber UI concepts</h1>
+      <p>Compare ten ImageGen concepts within the amber color family. Each image uses synthetic task content. These images show the current exploration.</p>
+      <p>Colors are approximate. ImageGen can change exact pixels and text. These concepts do not establish WCAG compliance, working controls, or a live app.</p>
+      <a href="prompts.json">Read the exact prompts</a>
+    </header>
+    <div class="gallery">
+      <figure>
+        <a class="image-link" href="01-soft-amber.png"><img src="01-soft-amber.png" alt="Soft Amber UI concept with warm dark surfaces."></a>
+        <figcaption>
+          <h2>01. Soft Amber</h2>
+          <p>Warm dark surfaces with soft amber cues.</p>
+          <a href="01-soft-amber.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="02-honey-graphite.png"><img src="02-honey-graphite.png" alt="Honey Graphite UI concept with neutral graphite and muted gold."></a>
+        <figcaption>
+          <h2>02. Honey Graphite</h2>
+          <p>Neutral graphite with muted gold.</p>
+          <a href="02-honey-graphite.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="03-sandstone.png"><img src="03-sandstone.png" alt="Sandstone UI concept with lifted warm taupe surfaces."></a>
+        <figcaption>
+          <h2>03. Sandstone</h2>
+          <p>Lifted warm taupe with amber details.</p>
+          <a href="03-sandstone.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="04-toasted-amber.png"><img src="04-toasted-amber.png" alt="Toasted Amber UI concept with orange amber on dark brown-black."></a>
+        <figcaption>
+          <h2>04. Toasted Amber</h2>
+          <p>Toasted orange amber on dark brown-black.</p>
+          <a href="04-toasted-amber.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="05-smoked-brass.png"><img src="05-smoked-brass.png" alt="Smoked Brass UI concept with desaturated brass on neutral charcoal."></a>
+        <figcaption>
+          <h2>05. Smoked Brass</h2>
+          <p>Desaturated brass on neutral charcoal.</p>
+          <a href="05-smoked-brass.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="06-deep-umber.png"><img src="06-deep-umber.png" alt="Deep Umber UI concept with deep brown surfaces and honey cues."></a>
+        <figcaption>
+          <h2>06. Deep Umber</h2>
+          <p>Deep umber with honey cues.</p>
+          <a href="06-deep-umber.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="07-amber-ash.png"><img src="07-amber-ash.png" alt="Amber Ash UI concept with medium warm gray surfaces."></a>
+        <figcaption>
+          <h2>07. Amber Ash</h2>
+          <p>Medium warm gray with amber details.</p>
+          <a href="07-amber-ash.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="08-parchment.png"><img src="08-parchment.png" alt="Parchment UI concept with light warm parchment surfaces."></a>
+        <figcaption>
+          <h2>08. Parchment</h2>
+          <p>Light warm parchment with amber cues.</p>
+          <a href="08-parchment.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="09-honey-mist.png"><img src="09-honey-mist.png" alt="Honey Mist UI concept with pale honey cream surfaces."></a>
+        <figcaption>
+          <h2>09. Honey Mist</h2>
+          <p>Pale honey cream with soft amber details.</p>
+          <a href="09-honey-mist.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+      <figure>
+        <a class="image-link" href="10-quiet-oled.png"><img src="10-quiet-oled.png" alt="Quiet OLED UI concept with pure black and restrained amber."></a>
+        <figcaption>
+          <h2>10. Quiet OLED</h2>
+          <p>Pure black with restrained amber.</p>
+          <a href="10-quiet-oled.png">Open full-size image</a>
+        </figcaption>
+      </figure>
+    </div>
+    <footer><a href="README.md">Concept notes and image list</a></footer>
+  </main>
+</body>
+</html>
