@@ -1,43 +1,28 @@
 # Amber Black
 
-Amber Black is a collection of high-contrast themes built around pure black,
-white text, and the `#FFB900` amber accent.
-
-See [amber-black-theme-style-guide.md](amber-black-theme-style-guide.md) for
-the Amber Black palette and component rules.
-
-Open the [style picker](style-guides/index.html) to compare previews and copy GitHub guide links.
-
-## Selected direction
-
-The selected guides are 01 Soft Amber, 02 Honey Graphite, and 09 Honey Mist.
-All three use dark surfaces and amber-only UI colors. Honey Mist is a written
-dark adaptation of the earlier light concept. There is no white or light mode.
-
-Read [the concept notes](style-guides/amber-options/README.md) for the selected
-guides and the [ten ImageGen concepts](style-guides/amber-options/index.html).
-The images remain design references. The exact selected tokens are in Markdown.
+High-contrast themes with pure black, white text, and `#FFB900` amber.
 
 ## Style guides
 
-Choose one complete profile before you apply its rules. Amber Black retains its
-original rules. The three selected guides define softer dark amber profiles.
-These written guides do not change the existing application themes.
+Amber Black keeps its original rules. The three selected guides define softer
+dark profiles with amber-only UI colors and no light mode. Choose one complete
+profile. These guides do not change the application themes.
 
-| Profile | Guide | Character |
-| --- | --- | --- |
-| Amber Black | [Original guide](amber-black-theme-style-guide.md) | Pure black, white text, solid amber interaction |
-| 01 Soft Amber | [Guide](style-guides/soft-amber.md) | Dark warm charcoal, ivory text, soft amber cues |
-| 02 Honey Graphite | [Guide](style-guides/honey-graphite.md) | Dark graphite, warm text, muted honey gold |
-| 09 Honey Mist | [Dark adaptation guide](style-guides/honey-mist.md) | Dark honey surfaces, cream text, restrained gold |
+[Style picker](style-guides/index.html) ·
+[Implementation and state rules](style-guides/README.md) ·
+[Concept notes and images](style-guides/amber-options/README.md)
 
-See the [shared implementation and state rules](style-guides/README.md).
+| Amber Black | 01 Soft Amber |
+| --- | --- |
+| [![Amber Black workflow editor: pure black surfaces, white text, and solid amber selection](style-guides/previews/amber-black.svg)](style-guides/previews/amber-black.svg) | [![Soft Amber workflow editor: warm charcoal surfaces, ivory text, and soft amber controls](style-guides/previews/soft-amber.svg)](style-guides/previews/soft-amber.svg) |
+| Pure black, white text, solid amber selection. | Warm charcoal, ivory text, soft amber cues. |
+| [GitHub guide](https://github.com/Jamir-boop/amber-black/blob/main/amber-black-theme-style-guide.md) · [Full-size preview](style-guides/previews/amber-black.svg) | [GitHub guide](https://github.com/Jamir-boop/amber-black/blob/main/style-guides/soft-amber.md) · [Full-size preview](style-guides/previews/soft-amber.svg) |
 
-Prior exploration: [Warm Charcoal](style-guides/warm-charcoal.md),
-[Slate Blue](style-guides/slate-blue.md), and [Sage Paper](style-guides/sage-paper.md).
-Their [CSS tokens](style-guides/palettes.css),
-[local preview](style-guides/preview.html), and
-[check script](style-guides/check_palettes.py) cover those earlier profiles only.
+| 02 Honey Graphite | 09 Honey Mist (dark) |
+| --- | --- |
+| [![Honey Graphite workflow editor: graphite surfaces, warm text, and muted honey-gold controls](style-guides/previews/honey-graphite.svg)](style-guides/previews/honey-graphite.svg) | [![Honey Mist dark workflow editor: dark honey surfaces, cream text, and gold controls](style-guides/previews/honey-mist.svg)](style-guides/previews/honey-mist.svg) |
+| Neutral graphite, warm text, muted honey gold. | Dark honey surfaces, cream text, restrained gold. |
+| [GitHub guide](https://github.com/Jamir-boop/amber-black/blob/main/style-guides/honey-graphite.md) · [Full-size preview](style-guides/previews/honey-graphite.svg) | [GitHub guide](https://github.com/Jamir-boop/amber-black/blob/main/style-guides/honey-mist.md) · [Full-size preview](style-guides/previews/honey-mist.svg) |
 
 ## Themes
 
@@ -56,23 +41,7 @@ Their [CSS tokens](style-guides/palettes.css),
 
 ## Installation
 
-- Firefox: follow [`firefox/README.md`](firefox/README.md).
-- Codex CLI: copy `amber-black.tmTheme` to `$CODEX_HOME/themes/`, then set
-  `theme = "amber-black"` under `[tui]` in `$CODEX_HOME/config.toml`.
-- Stylus themes: create a new Stylus userstyle and import the corresponding
-  `.styl` source.
-- micro: copy `amber-black.micro` into the micro colorschemes directory and
-  select `amber-black` as the colorscheme.
-- Glow: run `glow -s glow/amber-black.json`, or copy the file to
-  `~/.config/glow/styles/` (`%LOCALAPPDATA%\glow\styles\` on Windows) and set
-  `style: "<path to amber-black.json>"` in `glow.yml`.
-- Typora: copy `typora/amber-black.css` into the themes directory
-  (`%APPDATA%\Typora\themes\` on Windows, `~/.config/Typora/themes/` on Linux,
-  `~/Library/Application Support/abnerworks.Typora/themes/` on macOS), restart
-  Typora, then select `Amber Black` under Themes. The block caret needs Typora
-  1.14 or later, which ships a Chromium with `caret-shape` support.
-- Other JSON themes: import or copy the file using the target application's
-  custom-theme mechanism.
+See [installation instructions](INSTALLATION.md).
 
 ## License
 
