@@ -1,5 +1,7 @@
 # Reusable Style Guides
 
+Open the [style picker](index.html) to compare previews and copy GitHub guide links.
+
 The selected guides use dark surfaces and amber-only UI colors. Choose one
 complete profile for an application or an owned UI root. The original
 [Amber Black guide](../amber-black-theme-style-guide.md) keeps its own rules.

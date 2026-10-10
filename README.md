@@ -6,6 +6,8 @@ white text, and the `#FFB900` amber accent.
 See [amber-black-theme-style-guide.md](amber-black-theme-style-guide.md) for
 the Amber Black palette and component rules.
 
+Open the [style picker](style-guides/index.html) to compare previews and copy GitHub guide links.
+
 ## Selected direction
 
 The selected guides are 01 Soft Amber, 02 Honey Graphite, and 09 Honey Mist.

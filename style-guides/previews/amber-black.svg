@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1080" width="1440" height="1080" role="img" aria-labelledby="title description">
+  <title id="title">Amber Black full workflow editor preview</title>
+  <desc id="description">Static illustrated application UI with sample data. The Daily report workflow includes navigation, variables, resources, a step table, selected and focused rows, code with selected characters, run progress, a properties inspector, form controls, validation feedback, and an open action menu. Colors follow the Amber Black guide. The illustrated controls do not operate.</desc>
+  <style>
+    text { font-family: system-ui, sans-serif; font-size: 18px; }
+    .canvas { fill: #000000; }
+    .panel { fill: #080808; stroke: #332500; }
+    .field { fill: #000000; stroke: #FFB900; }
+    .text { fill: #FFFFFF; color: #FFFFFF; }
+    .muted { fill: #A0A0A0; color: #A0A0A0; }
+    .disabled { fill: #555555; color: #555555; }
+    .action { fill: #FFB900; }
+    .action-ink { fill: #000000; color: #000000; }
+    .selected { fill: #FFB900; }
+    .selected-text { fill: #000000; color: #000000; }
+    .hovered { fill: #FFB900; }
+    .hovered-text { fill: #000000; color: #000000; }
+    .selection { fill: #FFB900; }
+    .selection-ink { fill: #000000; color: #000000; }
+    .reference { fill: #FFB900; color: #FFB900; }
+    .warning { fill: #FFB900; color: #FFB900; }
+    .invalid { fill: #000000; stroke: #FFB900; stroke-width: 2; }
+    .divider { fill: none; stroke: #332500; }
+    .focus { fill: none; stroke: #FFB900; stroke-width: 2; }
+    .focus-gap { fill: none; stroke: #000000; stroke-width: 6; }
+    .selection-cue { fill: none; stroke: #FFB900; }
+    .selected-check { fill: none; stroke: #000000; stroke-width: 2; }
+    .check-surface { fill: none; stroke: #FFB900; }
+    .disabled-control { fill: #080808; stroke: #FFB900; stroke-dasharray: 3 3; }
+    .radio { fill: #000000; stroke: #FFB900; stroke-width: 2; }
+    .code-surface { fill: #000000; stroke: #FFB900; }
+    .menu-surface { fill: #080808; stroke: #FFB900; }
+    .progress-track { fill: #000000; stroke: #FFB900; }
+    .caret { fill: none; stroke: #FFB900; stroke-width: 2; }
+    .code-text { font-family: "Cascadia Code", "DejaVu Sans Mono", monospace; }
+    .icon { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect class="canvas" x="0" y="0" width="1440" height="1080"/>
+  <g data-role="app-bar">
+<rect class="panel" x="0" y="0" width="1440" height="72"/><g class="icon reference" transform="translate(24 25) scale(1)" fill="none" stroke="currentColor"><path d="M3 4h6v6H3z M15 14h6v6h-6z M9 7h9v7 M5 10v7h10"/></g><text class="text" x="60" y="45" style="font-size: 22px; font-weight: 650">Relay</text><text class="muted" x="264" y="44">Automations</text><text class="muted" x="397" y="44">/</text><text class="text" x="418" y="44" style="font-weight: 600">Daily report</text><g class="icon reference" transform="translate(1025 25) scale(0.833333)" fill="none" stroke="currentColor"><path d="m5 12 4 4L19 6"/></g><text class="muted" x="1054" y="44" style="font-size: 16px">Saved</text><rect class="field" x="1120" y="16" width="88" height="40" rx="4"/><text class="text" x="1164" y="42" text-anchor="middle">Share</text><rect class="action" x="1224" y="16" width="192" height="40" rx="4"/><g class="icon action-ink" transform="translate(1240 24) scale(0.916667)" fill="none" stroke="currentColor"><path d="m8 4 12 8-12 8z"/></g><text class="action-ink" x="1273" y="42" style="font-weight: 600">Run workflow</text>
+</g>
+  <rect class="panel" x="0" y="72" width="240" height="972"/>
+  <rect class="panel" x="1056" y="72" width="384" height="972"/>
+  <path class="divider" d="M240 72V1044"/>
+  <path class="divider" d="M1056 72V1044"/>
+  <text class="muted" x="24" y="108" style="font-size: 16px">Studio workspace</text><g class="icon muted" transform="translate(202 90) scale(0.75)" fill="none" stroke="currentColor"><path d="m7 9 5 5 5-5"/></g>
+  <g data-role="navigation">
+<rect class="selected" x="12" y="130" width="216" height="44" rx="4"/><rect class="selection-cue" x="12" y="130" width="216" height="44" rx="4"/><g class="icon selected-text" transform="translate(25 141) scale(0.916667)" fill="none" stroke="currentColor"><path d="M3 4h6v6H3z M15 14h6v6h-6z M9 7h9v7 M5 10v7h10"/></g><text class="selected-text" x="60" y="158" style="font-weight: 600">Workflows</text><g class="icon text" transform="translate(25 190) scale(0.916667)" fill="none" stroke="currentColor"><path d="m8 4 12 8-12 8z"/></g><text class="text" x="60" y="209">Runs</text><g class="icon text" transform="translate(25 236) scale(0.916667)" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l4 2"/></g><text class="text" x="60" y="255">Schedules</text><g class="icon text" transform="translate(25 282) scale(0.916667)" fill="none" stroke="currentColor"><path d="M7 3v5 M17 3v5 M5 8h14v3a7 7 0 0 1-14 0z M12 18v4"/></g><text class="text" x="60" y="301">Connections</text>
+</g>
+  <path class="divider" d="M24 328H216"/>
+  <g data-role="variables">
+<text class="text" x="24" y="362" style="font-size: 17px; font-weight: 600">Workflow variables</text><g class="icon muted" transform="translate(202 344) scale(0.75)" fill="none" stroke="currentColor"><path d="M12 5v14 M5 12h14"/></g><text class="reference" x="24" y="401" style="font-size: 17px">$ report_date</text><text class="muted" x="24" y="426" style="font-size: 16px">Today, local time</text><text class="reference" x="24" y="468" style="font-size: 17px">$ recipients</text><text class="muted" x="24" y="493" style="font-size: 16px">2 addresses</text><text class="reference" x="24" y="535" style="font-size: 17px">$ source_file</text><text class="muted" x="24" y="560" style="font-size: 16px">daily.csv</text>
+</g>
+  <path class="divider" d="M24 585H216"/>
+  <g data-role="resources">
+<text class="text" x="24" y="619" style="font-size: 17px; font-weight: 600">Resources</text><g class="icon text" transform="translate(24 641) scale(0.916667)" fill="none" stroke="currentColor"><path d="M5 3h9l5 5v13H5z M14 3v6h5 M8 13h8 M8 17h6"/></g><text class="text" x="58" y="661">daily.csv</text><text class="muted" x="58" y="686" style="font-size: 15px">28 rows, 4 columns</text><g class="icon text" transform="translate(24 710) scale(0.916667)" fill="none" stroke="currentColor"><path d="M5 3h9l5 5v13H5z M14 3v6h5 M8 13h8 M8 17h6"/></g><text class="text" x="58" y="730">summary.md</text><text class="muted" x="58" y="755" style="font-size: 15px">Created on each run</text>
+</g>
+  <path class="divider" d="M24 787H216"/>
+  <text class="text" x="24" y="821" style="font-size: 17px; font-weight: 600">Schedule</text><g class="icon text" transform="translate(24 840) scale(0.916667)" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 7v5l4 2"/></g><text class="text" x="58" y="858">Every weekday</text><text class="muted" x="58" y="883" style="font-size: 15px">08:00 / America/Lima</text><rect class="field" x="24" y="905" width="192" height="44" rx="4"/><text class="text" x="120" y="933" text-anchor="middle">Edit schedule</text><g class="icon muted" transform="translate(24 985) scale(0.833333)" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9 8a3 3 0 1 1 5 2c-2 1-2 2-2 4 M12 18v.2"/></g><text class="muted" x="54" y="1001" style="font-size: 16px">Help and shortcuts</text>
+  <text class="text" x="264" y="118" style="font-size: 28px; font-weight: 650">Daily report</text><text class="muted" x="264" y="146" style="font-size: 17px">Build and review the morning summary.</text>
+  <g data-role="disabled-button">
+<rect class="disabled-control" x="884" y="98" width="148" height="44" rx="4"/><g class="icon disabled" transform="translate(899 109) scale(0.916667)" fill="none" stroke="currentColor"><path d="M5 12h14 M14 7l5 5-5 5"/></g><text class="disabled" x="935" y="126">Publish</text>
+</g>
+  <g data-role="tabs-active">
+<text class="text" x="264" y="190" style="font-weight: 600">Steps</text><rect class="action" x="264" y="205" width="50" height="2"/>
+</g>
+  <g data-role="tabs-inactive">
+<text class="muted" x="354" y="190">Run history</text><text class="muted" x="495" y="190">Settings</text>
+</g>
+  <path class="divider" d="M240 207H1056"/>
+  <g data-role="search">
+<rect class="field" x="264" y="226" width="330" height="44" rx="4"/><g class="icon muted" transform="translate(278 237) scale(0.916667)" fill="none" stroke="currentColor"><circle cx="10" cy="10" r="6.5"/><path d="M16.5 16.5 21 21"/></g><text class="muted" x="313" y="254">Find a step</text><text class="muted" x="577" y="254" style="font-size: 16px" text-anchor="end">/</text>
+</g>
+  <rect class="field" x="610" y="226" width="166" height="44" rx="4"/><text class="text" x="628" y="254">All steps</text><g class="icon muted" transform="translate(742 237) scale(0.916667)" fill="none" stroke="currentColor"><path d="m7 9 5 5 5-5"/></g>
+  <g data-role="primary-button">
+<rect class="action" x="792" y="226" width="176" height="44" rx="4"/><g class="icon action-ink" transform="translate(808 237) scale(0.916667)" fill="none" stroke="currentColor"><path d="M12 5v14 M5 12h14"/></g><text class="action-ink" x="840" y="254" style="font-weight: 600">Add step</text>
+</g>
+  <rect class="field" x="984" y="226" width="48" height="44" rx="4"/><g class="icon text" transform="translate(997 237) scale(0.916667)" fill="none" stroke="currentColor"><path d="M5 12h.2 M12 12h.2 M19 12h.2"/></g>
+  <rect class="panel" x="264" y="286" width="768" height="44"/>
+  <text class="muted" x="324" y="314" style="font-size: 15px; font-weight: 600">STEP</text><text class="muted" x="755" y="314" style="font-size: 15px; font-weight: 600">TYPE</text><text class="muted" x="905" y="314" style="font-size: 15px; font-weight: 600">STATE</text>
+  <g data-role="row-normal">
+<rect class="canvas" x="264" y="330" width="768" height="64"/><g data-role="checkbox-unchecked">
+<rect class="field" x="280" y="352" width="20" height="20"/>
+</g><text class="text" x="322" y="359" style="font-size: 16px">01</text><text class="text" x="363" y="358">Fetch source data</text><text class="muted" x="363" y="381" style="font-size: 15px">daily.csv / CSV input</text><text class="text" x="755" y="367" style="font-size: 17px">Read</text><text class="text" x="905" y="367" style="font-size: 17px">Ready</text><path class="divider" d="M264 394H1032"/>
+</g>
+  <g data-role="row-selected">
+<rect class="selected" x="264" y="394" width="768" height="64"/><rect class="selection-cue" x="264" y="394" width="768" height="64"/><g data-role="checkbox-checked">
+<rect class="selected-check" x="280" y="416" width="20" height="20"/><g class="icon selected-text" transform="translate(279 414) scale(0.916667)" fill="none" stroke="currentColor"><path d="m5 12 4 4L19 6"/></g>
+</g><text class="selected-text" x="322" y="423" style="font-size: 16px">02</text><text class="selected-text" x="363" y="422" style="font-weight: 600">Build summary</text><text class="selected-text" x="363" y="445" style="font-size: 15px">Selected / uses report_date</text><text class="selected-text" x="755" y="431" style="font-size: 17px">Transform</text><text class="selected-text" x="905" y="431" style="font-size: 17px">Ready</text><path class="divider" d="M264 458H1032"/>
+</g>
+  <g data-role="row-hovered">
+<rect class="hovered" x="264" y="458" width="768" height="64"/><rect class="focus-gap" x="269" y="463" width="758" height="54" rx="3"/><rect class="focus" x="269" y="463" width="758" height="54" rx="3" data-role="row-focus"/><rect class="selected-check" x="280" y="480" width="20" height="20"/><text class="hovered-text" x="322" y="487" style="font-size: 16px">03</text><text class="hovered-text" x="363" y="486">Check recipients</text><text class="hovered-text" x="363" y="509" style="font-size: 15px">Focused / address needs a domain</text><text class="hovered-text" x="755" y="495" style="font-size: 17px">Validate</text><text class="hovered-text" x="905" y="495" style="font-size: 17px">Warning</text><path class="divider" d="M264 522H1032"/>
+</g>
+  <rect class="canvas" x="264" y="522" width="768" height="64"/><rect class="field" x="280" y="544" width="20" height="20"/><text class="text" x="322" y="551" style="font-size: 16px">04</text><text class="text" x="363" y="550">Save report</text><text class="muted" x="363" y="573" style="font-size: 15px">summary.md / workflow output</text><text class="text" x="755" y="559" style="font-size: 17px">Write</text><text class="text" x="905" y="559" style="font-size: 17px">Ready</text><path class="divider" d="M264 586H1032"/>
+  <rect class="canvas" x="264" y="586" width="768" height="64"/><rect class="check-surface" x="280" y="608" width="20" height="20"/><text class="disabled" x="322" y="615" style="font-size: 16px">05</text><text class="disabled" x="363" y="614">Notify reviewers</text><text class="disabled" x="363" y="637" style="font-size: 15px">Waits for a valid recipient</text><text class="disabled" x="755" y="623" style="font-size: 17px">Send</text><text class="disabled" x="905" y="623" style="font-size: 17px">Blocked</text><path class="divider" d="M264 650H1032"/>
+  <text class="muted" x="280" y="684" style="font-size: 16px">5 steps / 1 warning / validate the recipient to publish.</text>
+  <rect class="panel" x="240" y="712" width="816" height="332"/>
+  <g data-role="code">
+<text class="text" x="264" y="747" style="font-weight: 600">Code</text><rect class="action" x="264" y="761" width="46" height="2"/><text class="muted" x="350" y="747">Output</text><text class="muted" x="450" y="747" style="font-size: 16px">report.py</text><rect class="field" x="938" y="723" width="94" height="34" rx="4"/><g class="icon text" transform="translate(949 730) scale(0.791667)" fill="none" stroke="currentColor"><path d="M8 8h13v13H8z M16 8V3H3v13h5"/></g><text class="text" x="978" y="745" style="font-size: 16px">Copy</text><rect class="code-surface" x="264" y="778" width="768" height="132"/><text class="muted" x="285" y="803" style="font-size: 16px">01</text><text class="text code-text" x="324" y="803" style="font-size: 17px">report = read_csv(&quot;daily.csv&quot;)</text><text class="muted" x="285" y="832" style="font-size: 16px">02</text><text class="text code-text" x="324" y="832" style="font-size: 17px">summary = </text><g data-role="character-selection">
+<rect class="selection" x="426" y="811" width="136" height="26"/><text class="selection-ink code-text" x="426" y="832" style="font-size: 17px">build_summary</text>
+</g><text class="text code-text" x="562" y="832" style="font-size: 17px">(report)</text><text class="muted" x="285" y="861" style="font-size: 16px">03</text><text class="text code-text" x="324" y="861" style="font-size: 17px">send_report(summary, recipients)</text><text class="muted" x="285" y="890" style="font-size: 16px">04</text><text class="muted code-text" x="324" y="890" style="font-size: 17px"># Await a valid recipient address</text>
+</g>
+  <g data-role="loading">
+<text class="text" x="280" y="946" style="font-size: 17px; font-weight: 600">Latest test</text><text class="reference" x="448" y="946" style="font-size: 17px">Running: step 2 of 5</text><text class="muted" x="1016" y="946" style="font-size: 16px" text-anchor="end">40%</text>
+</g>
+  <g data-role="progress">
+<rect class="progress-track" x="280" y="966" width="736" height="8" rx="4"/><rect class="action" x="280" y="966" width="294" height="8" rx="4"/>
+</g>
+  <g data-role="status-feedback">
+<g class="icon reference" transform="translate(280 991) scale(0.791667)" fill="none" stroke="currentColor"><path d="m5 12 4 4L19 6"/></g><text class="text code-text" x="311" y="1008" style="font-size: 16px">09:12:03   Source loaded: 28 rows</text><text class="muted code-text" x="311" y="1030" style="font-size: 16px">09:12:04   Building summary...</text>
+</g>
+  <text class="text" x="1080" y="113" style="font-size: 22px; font-weight: 650">Properties</text><text class="muted" x="1080" y="145" style="font-size: 17px">02 / Build summary</text><path class="divider" d="M1056 168H1440"/>
+  <text class="text" x="1080" y="197" style="font-size: 17px">Name</text>
+  <g data-role="field-editable">
+<rect class="field" x="1080" y="212" width="336" height="44" rx="4"/><rect class="focus" x="1076" y="208" width="344" height="52" rx="6"/><text class="text" x="1094" y="240">Build summary</text><path class="caret" d="M1228 225v20"/>
+</g>
+  <text class="text" x="1080" y="284" style="font-size: 17px">Step ID / read-only</text>
+  <g data-role="field-readonly">
+<rect class="field" x="1080" y="299" width="336" height="44" rx="4"/><text class="text" x="1094" y="327">step_02</text><g class="icon muted" transform="translate(1380 310) scale(0.916667)" fill="none" stroke="currentColor"><path d="M7 10V7a5 5 0 0 1 10 0v3 M5 10h14v11H5z M12 14v3"/></g>
+</g>
+  <text class="text" x="1080" y="372" style="font-size: 17px">Output format</text>
+  <g data-role="dropdown">
+<rect class="field" x="1080" y="386" width="336" height="44" rx="4"/><text class="text" x="1094" y="414">Markdown (.md)</text><g class="icon muted" transform="translate(1380 397) scale(0.916667)" fill="none" stroke="currentColor"><path d="m7 9 5 5 5-5"/></g>
+</g>
+  <text class="text" x="1080" y="460" style="font-size: 17px">Recipient</text>
+  <g data-role="field-invalid">
+<rect class="invalid" x="1080" y="474" width="336" height="44" rx="4"/><text class="text" x="1094" y="502">reports@</text><g class="icon warning" transform="translate(1380 485) scale(0.916667)" fill="none" stroke="currentColor"><path d="M12 3 22 21H2z M12 9v5 M12 17v.2"/></g>
+</g>
+  <g data-role="warning">
+<text class="warning" x="1080" y="544" style="font-size: 17px">Invalid address. Add a domain.</text><text class="muted" x="1080" y="569" style="font-size: 16px">Example: reports@example.org</text>
+</g>
+  <g data-role="toggle-on">
+<text class="text" x="1080" y="612">Include source links</text><rect class="action" x="1360" y="591" width="56" height="28" rx="14"/><circle class="action-ink" cx="1402" cy="605" r="10"/>
+</g>
+  <g data-role="toggle-off">
+<text class="text" x="1080" y="656">Send test copy</text><rect class="field" x="1360" y="635" width="56" height="28" rx="14"/><circle class="muted" cx="1374" cy="649" r="10"/>
+</g>
+  <text class="text" x="1080" y="699" style="font-size: 17px">Run mode</text>
+  <g data-role="radio-selected">
+<circle class="radio" cx="1090" cy="724" r="10"/><circle class="action" cx="1090" cy="724" r="5"/><text class="text" x="1110" y="730" style="font-size: 17px">Review first</text>
+</g>
+  <g data-role="radio-unselected">
+<circle class="radio" cx="1286" cy="724" r="10"/><text class="text" x="1306" y="730" style="font-size: 17px">Automatic</text>
+</g>
+  <g data-role="secondary-button">
+<rect class="field" x="1080" y="751" width="112" height="44" rx="4"/><text class="text" x="1136" y="779" text-anchor="middle">Reset</text>
+</g>
+  <rect class="disabled-control" x="1208" y="751" width="208" height="44" rx="4"/><text class="disabled" x="1312" y="779" text-anchor="middle">Apply changes</text>
+  <text class="text" x="1080" y="829" style="font-size: 17px; font-weight: 600">Step actions</text>
+  <rect class="field" x="1080" y="842" width="336" height="40" rx="4"/><text class="text" x="1094" y="868">More actions</text><g class="icon text" transform="translate(1380 851) scale(0.916667)" fill="none" stroke="currentColor"><path d="m7 9 5 5 5-5"/></g>
+  <g data-role="menu">
+<rect class="menu-surface" x="1080" y="892" width="336" height="138"/><g class="icon text" transform="translate(1094 899) scale(0.916667)" fill="none" stroke="currentColor"><path d="M8 8h13v13H8z M16 8V3H3v13h5"/></g><text class="text" x="1128" y="916">Duplicate step</text><text class="muted" x="1400" y="916" style="font-size: 15px" text-anchor="end">Ctrl+D</text><g data-role="menu-hovered">
+<rect class="hovered" x="1081" y="927" width="334" height="34"/><g class="icon hovered-text" transform="translate(1094 933) scale(0.875)" fill="none" stroke="currentColor"><path d="m7 5-5 7 5 7 M17 5l5 7-5 7 M14 3l-4 18"/></g><text class="hovered-text" x="1128" y="950">Copy step JSON</text>
+</g><g class="icon text" transform="translate(1094 967) scale(0.916667)" fill="none" stroke="currentColor"><path d="M3 6h7l2 3h9v12H3z"/></g><text class="text" x="1128" y="984">Move to workflow</text><g data-role="menu-disabled">
+<g class="icon disabled" transform="translate(1094 1000) scale(0.875)" fill="none" stroke="currentColor"><path d="M3 6h18 M9 6V3h6v3 M6 6l1 15h10l1-15 M10 10v7 M14 10v7"/></g><text class="disabled" x="1128" y="1017">Delete during run</text>
+</g>
+</g>
+  <rect class="panel" x="0" y="1044" width="1440" height="36"/><g class="icon reference" transform="translate(24 1053) scale(0.75)" fill="none" stroke="currentColor"><path d="m5 12 4 4L19 6"/></g><text class="muted" x="50" y="1068" style="font-size: 15px">Draft saved</text><text class="muted" x="264" y="1068" style="font-size: 15px">Sample data / no live connections</text><text class="muted" x="1416" y="1068" style="font-size: 15px" text-anchor="end">Static UI preview</text>
+</svg>
